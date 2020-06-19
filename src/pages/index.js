@@ -150,28 +150,43 @@ const IndexPage = () => {
           <Row justify="space-around" align="middle">
             <Col xs={24} lg={8}>
               <div className="optionSection">
-                <Img
-                  fluid={data.tl_sign.childImageSharp.fluid}
+                <img
+                  src={`${data.test.childImageSharp.fluid.src}`}
                   className="photoOption"
                   // style={{ height: "400px", height: "500px" }}
                 />
+                {/* <Img
+                  fluid={data.tl_sign.childImageSharp.fluid}
+                  className="photoOption"
+                  // style={{ height: "400px", height: "500px" }}
+                /> */}
                 <h3>Our Story</h3>
               </div>
             </Col>
             <Col xs={24} lg={8}>
               <div className="optionSection">
-                <Img
+                {/* <Img
                   fluid={data.test.childImageSharp.fluid}
                   className="photoOption"
+                /> */}
+                <img
+                  src={`${data.test.childImageSharp.fluid.src}`}
+                  className="photoOption"
+                  // style={{ height: "400px", height: "500px" }}
                 />
                 <h3>Our Food</h3>
               </div>
             </Col>
             <Col xs={24} lg={8}>
               <div className="optionSection">
-                <Img
+                {/* <Img
                   fluid={data.test.childImageSharp.fluid}
                   className="photoOption"
+                /> */}
+                <img
+                  src={`${data.test.childImageSharp.fluid.src}`}
+                  className="photoOption"
+                  // style={{ height: "400px", height: "500px" }}
                 />
                 <h3>Vist Us</h3>
               </div>
