@@ -10,7 +10,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Oswald", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 p {
   font-family: "Roboto", sans-serif;
@@ -60,8 +60,10 @@ p {
       max-width: 375px;
     }
     img {
-      max-width: 968.8888888888888px;
-      max-height: 545px;
+      //   max-width: 968.8888888888888px;
+      //   max-height: 545px;
+      width: 350px;
+      height: 250px;
     }
   }
   .photoDivider {
@@ -84,6 +86,43 @@ p {
       height: 250px;
       //   max-height: 250px;
       //   max-width: 350px;
+    }
+  }
+  #menuSection {
+    img {
+      height: 100%;
+      width: 100%;
+    }
+    #menu {
+      background-color: #2c2b2b;
+      height: 100%;
+      padding: 2rem 4rem;
+      //   #menuContent {
+      //     display: flex;
+      //     justify-content: space-evenly;
+      //   }
+      h1 {
+        color: white;
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 4rem;
+      }
+      .menuItem {
+        .topPortion {
+          display: flex;
+          justify-content: space-between;
+        }
+        h2 {
+          color: white;
+        }
+        p {
+          color: #8a8a8a;
+        }
+        hr {
+          border: 1px solid #8a8a8a;
+          margin-top: 1rem;
+        }
+      }
     }
   }
 }

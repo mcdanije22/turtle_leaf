@@ -65,6 +65,20 @@ const IndexPage = () => {
           }
         }
       }
+      smoothie: file(relativePath: { eq: "smoothie.jpg" }) {
+        childImageSharp {
+          fluid(quality: 90, maxWidth: 380) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      wrap: file(relativePath: { eq: "wrap.jpg" }) {
+        childImageSharp {
+          fluid(quality: 90, maxWidth: 380) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
   console.log(data)
@@ -121,7 +135,8 @@ const IndexPage = () => {
         <div id="IntroSection">
           <Row>
             <Col span={24}>
-              <Img fluid={data.adamHeadShot.childImageSharp.fluid} />
+              {/* <Img fluid={data.adamHeadShot.childImageSharp.fluid} /> */}
+              <img src={`${data.adamHeadShot.childImageSharp.fluid.src}`} />
             </Col>
             <Col span={24}>
               <div id="introText">
@@ -147,8 +162,8 @@ const IndexPage = () => {
             style={{ height: "300px", width: "380px" }}
           /> */}
           <h1>Local Food in the Heart of Elmira</h1>
-          <Row justify="space-around" align="middle">
-            <Col xs={24} lg={8}>
+          <Row justify="center" align="middle">
+            <Col xs={24} lg={6}>
               <div className="optionSection">
                 <img
                   src={`${data.test.childImageSharp.fluid.src}`}
@@ -160,10 +175,24 @@ const IndexPage = () => {
                   className="photoOption"
                   // style={{ height: "400px", height: "500px" }}
                 /> */}
-                <h3>Our Story</h3>
+                <p>Our Story</p>
               </div>
             </Col>
-            <Col xs={24} lg={8}>
+            <Col xs={24} lg={6}>
+              <div className="optionSection">
+                {/* <Img
+                  fluid={data.test.childImageSharp.fluid}
+                  className="photoOption"
+                /> */}
+                <img
+                  src={`${data.smoothie.childImageSharp.fluid.src}`}
+                  className="photoOption"
+                  // style={{ height: "400px", height: "500px" }}
+                />
+                <p>Our Food</p>
+              </div>
+            </Col>
+            <Col xs={24} lg={6}>
               <div className="optionSection">
                 {/* <Img
                   fluid={data.test.childImageSharp.fluid}
@@ -174,21 +203,73 @@ const IndexPage = () => {
                   className="photoOption"
                   // style={{ height: "400px", height: "500px" }}
                 />
-                <h3>Our Food</h3>
+                <p>Vist Us</p>
               </div>
             </Col>
+          </Row>
+        </div>
+
+        <div id="menuSection">
+          <Row>
             <Col xs={24} lg={8}>
-              <div className="optionSection">
-                {/* <Img
-                  fluid={data.test.childImageSharp.fluid}
-                  className="photoOption"
-                /> */}
-                <img
-                  src={`${data.test.childImageSharp.fluid.src}`}
-                  className="photoOption"
-                  // style={{ height: "400px", height: "500px" }}
-                />
-                <h3>Vist Us</h3>
+              <img src={`${data.wrap.childImageSharp.fluid.src}`} />
+            </Col>
+            <Col xs={24} lg={16}>
+              <div id="menu">
+                <h1>Our Menu Favorites</h1>
+                <div id="menuContent">
+                  <Row justify="space-around" align="top">
+                    <Col lg={6}>
+                      <div id="menuLeftSide">
+                        <div className="menuItem">
+                          <div className="topPortion">
+                            <h2>Sandwhich</h2>
+                            <h2>$5.99</h2>
+                          </div>
+                          <p>test test test test</p>
+                          <hr />
+                        </div>
+                      </div>
+                    </Col>
+                    <Col lg={6}>
+                      <div id="menuRightSide">
+                        <div className="menuItem">
+                          <div className="topPortion">
+                            <h2>Sandwhich</h2>
+                            <h2>$5.99</h2>
+                          </div>
+                          <p>test test test test</p>
+                          <hr />
+                        </div>
+                      </div>
+                    </Col>
+                    <Col span={18}>
+                      <Button size="large" ghost>
+                        View Full Menu
+                      </Button>
+                    </Col>
+                  </Row>
+                  {/* <div id="menuLeftSide">
+                    <div className="menuItem">
+                      <div className="topPortion">
+                        <h2>Sandwhich</h2>
+                        <h2>$5.99</h2>
+                      </div>
+                      <p>test test test test</p>
+                      <hr />
+                    </div>
+                  </div>
+                  <div id="menuRightSide">
+                    <div className="menuItem">
+                      <div className="topPortion">
+                        <h2>Sandwhich</h2>
+                        <h2>$5.99</h2>
+                      </div>
+                      <p>test test test test</p>
+                      <hr />
+                    </div>
+                  </div> */}
+                </div>
               </div>
             </Col>
           </Row>
