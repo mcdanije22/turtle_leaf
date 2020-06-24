@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import { Button, Row, Col } from "antd"
+import { Button, Row, Col, Carousel } from "antd"
 import {
   MenuOutlined,
   FacebookOutlined,
@@ -82,6 +82,9 @@ const IndexPage = () => {
     }
   `)
   console.log(data)
+  function onChange(a, b, c) {
+    console.log(a, b, c)
+  }
   return (
     <div id="langingPage">
       <div
@@ -133,12 +136,12 @@ const IndexPage = () => {
       </div>
       <div id="mainContent">
         <div id="IntroSection">
-          <Row>
-            <Col span={24}>
+          <Row justify="center">
+            <Col xs={24} lg={6}>
               {/* <Img fluid={data.adamHeadShot.childImageSharp.fluid} /> */}
               <img src={`${data.adamHeadShot.childImageSharp.fluid.src}`} />
             </Col>
-            <Col span={24}>
+            <Col xs={24} lg={6}>
               <div id="introText">
                 <h2>Welcome back to Turtle Leaf Cafe</h2>
                 <p>
@@ -208,7 +211,6 @@ const IndexPage = () => {
             </Col>
           </Row>
         </div>
-
         <div id="menuSection">
           <Row>
             <Col xs={24} lg={8}>
@@ -249,30 +251,47 @@ const IndexPage = () => {
                       </Button>
                     </Col>
                   </Row>
-                  {/* <div id="menuLeftSide">
-                    <div className="menuItem">
-                      <div className="topPortion">
-                        <h2>Sandwhich</h2>
-                        <h2>$5.99</h2>
-                      </div>
-                      <p>test test test test</p>
-                      <hr />
-                    </div>
-                  </div>
-                  <div id="menuRightSide">
-                    <div className="menuItem">
-                      <div className="topPortion">
-                        <h2>Sandwhich</h2>
-                        <h2>$5.99</h2>
-                      </div>
-                      <p>test test test test</p>
-                      <hr />
-                    </div>
-                  </div> */}
                 </div>
               </div>
             </Col>
           </Row>
+        </div>
+        <div id="reviewSection">
+          <h1>People Love Us!</h1>
+          <Carousel>
+            <div>
+              <iframe
+                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fkathy.tutak.3%2Fposts%2F10223232923920111&width=500"
+                width="350"
+                height="280"
+                style={{ border: "none", overflow: "hidden", padding: "1rem" }}
+              ></iframe>
+            </div>
+            <div>
+              <iframe
+                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fkathy.tutak.3%2Fposts%2F10223232923920111&width=500"
+                width="350"
+                height="280"
+                style={{ border: "none", overflow: "hidden", padding: "1rem" }}
+              ></iframe>
+            </div>
+            {/* <div>
+              <iframe
+                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Ffrancesca.coutinhohenning%2Fposts%2F3297716760260046&width=500"
+                width="350"
+                height="700"
+                style={{ border: "none", overflow: "hidden" }}
+              ></iframe>
+            </div>
+            <div>
+              <iframe
+                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Ffrancesca.coutinhohenning%2Fposts%2F3297716760260046&width=500"
+                width="350"
+                height="700"
+                style={{ border: "none", overflow: "hidden" }}
+              ></iframe>
+            </div> */}
+          </Carousel>
         </div>
       </div>
     </div>
