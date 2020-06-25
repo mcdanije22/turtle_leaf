@@ -258,39 +258,55 @@ const IndexPage = () => {
         </div>
         <div id="reviewSection">
           <h1>People Love Us!</h1>
-          <Carousel>
-            <div>
-              <iframe
-                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fkathy.tutak.3%2Fposts%2F10223232923920111&width=500"
-                width="350"
-                height="280"
-                style={{ border: "none", overflow: "hidden", padding: "1rem" }}
-              ></iframe>
-            </div>
-            <div>
-              <iframe
-                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fkathy.tutak.3%2Fposts%2F10223232923920111&width=500"
-                width="350"
-                height="280"
-                style={{ border: "none", overflow: "hidden", padding: "1rem" }}
-              ></iframe>
-            </div>
+
+          <Carousel autoplay>
             {/* <div>
-              <iframe
-                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Ffrancesca.coutinhohenning%2Fposts%2F3297716760260046&width=500"
-                width="350"
-                height="700"
-                style={{ border: "none", overflow: "hidden" }}
-              ></iframe>
+                  <iframe
+                    src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fkathy.tutak.3%2Fposts%2F10223232923920111&width=500"
+                    width="350"
+                    height="280"
+                    style={{
+                      border: "none",
+                      overflow: "hidden",
+                    }}
+                  ></iframe>
+                </div>
+                <div>
+                  <iframe
+                    src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Femily.carson.1804%2Fposts%2F10157618908714737&width=500"
+                    width="500"
+                    height="729"
+                    style={{
+                      border: "none",
+                      overflow: "hidden",
+                    }}
+                  ></iframe>
+                </div> */}
+            <div className="review">
+              <p>
+                "Great spot for Food! I love the Elvis Burger! so many other
+                great flatbreads, very creative and unique. Adam runs an
+                excellent establishment!""
+              </p>
+              <h3>Craig Colwell</h3>
             </div>
-            <div>
-              <iframe
-                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Ffrancesca.coutinhohenning%2Fposts%2F3297716760260046&width=500"
-                width="350"
-                height="700"
-                style={{ border: "none", overflow: "hidden" }}
-              ></iframe>
-            </div> */}
+            <div className="review">
+              <p>
+                "The Big Ham Sandwich and Ham Cheddar Pear Panini are our
+                absolute favorites. Delicious flavors. Husband also loves the
+                Bistro Roast Beef. Can't wait to try Strawberry Turkey Brie
+                Panini"
+              </p>
+              <h3>Kathy Ring Tutak</h3>
+            </div>
+            <div className="review">
+              <p>
+                "This is the most caring people I have ever met they actually
+                care about their customers you not just another sale here! I’d
+                recommend this place to anyone!!""
+              </p>
+              <h3>Sharon Sherman-Appleton</h3>
+            </div>
           </Carousel>
         </div>
       </div>

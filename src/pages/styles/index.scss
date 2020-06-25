@@ -130,10 +130,26 @@ p {
     padding: 4rem 1rem;
     text-align: center;
     h1 {
-      margin-bottom: 2rem;
+      margin-bottom: 4rem;
     }
     .ant-carousel .slick-dots li button {
       background-color: black;
+      margin-top: 4rem;
+    }
+    .review {
+      max-width: 800px;
+      p {
+        line-height: 1.6;
+        font-size: 1.3rem;
+        @include desktop {
+          font-size: 1.5rem;
+        }
+      }
+      h3 {
+        @include desktop {
+          font-size: 2rem;
+        }
+      }
     }
   }
 }
