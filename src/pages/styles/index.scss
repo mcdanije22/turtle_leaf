@@ -57,14 +57,12 @@ p {
     }
   }
   #IntroSection {
-    padding: 4rem 1rem;
+    margin: 8rem 1rem 6rem 1rem;
     #introText {
       margin-top: 1rem;
       max-width: 375px;
     }
     img {
-      //   max-width: 968.8888888888888px;
-      //   max-height: 545px;
       width: 350px;
       height: 250px;
     }
@@ -74,13 +72,12 @@ p {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    margin: 4rem 0;
     @include desktop {
       background-attachment: fixed;
     }
   }
   #heroPhotoSection {
-    padding: 4rem 1rem;
+    margin: 6rem 1rem;
     text-align: center;
     h1 {
       font-size: 1.5rem;
@@ -94,6 +91,7 @@ p {
     }
   }
   #menuSection {
+    margin: 6rem 0;
     img {
       height: 100%;
       width: 100%;
@@ -127,7 +125,7 @@ p {
     }
   }
   #reviewSection {
-    padding: 4rem 1rem;
+    margin: 4rem 1rem;
     text-align: center;
     h1 {
       margin-bottom: 4rem;
