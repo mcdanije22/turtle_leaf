@@ -171,7 +171,6 @@ const IndexPage = () => {
                 <img
                   src={`${data.test.childImageSharp.fluid.src}`}
                   className="photoOption"
-                  // style={{ height: "400px", height: "500px" }}
                 />
                 {/* <Img
                   fluid={data.tl_sign.childImageSharp.fluid}
@@ -183,28 +182,18 @@ const IndexPage = () => {
             </Col>
             <Col xs={24} lg={6}>
               <div className="optionSection">
-                {/* <Img
-                  fluid={data.test.childImageSharp.fluid}
-                  className="photoOption"
-                /> */}
                 <img
                   src={`${data.smoothie.childImageSharp.fluid.src}`}
                   className="photoOption"
-                  // style={{ height: "400px", height: "500px" }}
                 />
                 <p>Our Food</p>
               </div>
             </Col>
             <Col xs={24} lg={6}>
               <div className="optionSection">
-                {/* <Img
-                  fluid={data.test.childImageSharp.fluid}
-                  className="photoOption"
-                /> */}
                 <img
                   src={`${data.test.childImageSharp.fluid.src}`}
                   className="photoOption"
-                  // style={{ height: "400px", height: "500px" }}
                 />
                 <p>Vist Us</p>
               </div>
@@ -258,30 +247,7 @@ const IndexPage = () => {
         </div>
         <div id="reviewSection">
           <h1>People Love Us!</h1>
-
           <Carousel autoplay>
-            {/* <div>
-                  <iframe
-                    src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fkathy.tutak.3%2Fposts%2F10223232923920111&width=500"
-                    width="350"
-                    height="280"
-                    style={{
-                      border: "none",
-                      overflow: "hidden",
-                    }}
-                  ></iframe>
-                </div>
-                <div>
-                  <iframe
-                    src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Femily.carson.1804%2Fposts%2F10157618908714737&width=500"
-                    width="500"
-                    height="729"
-                    style={{
-                      border: "none",
-                      overflow: "hidden",
-                    }}
-                  ></iframe>
-                </div> */}
             <div className="review">
               <p>
                 "Great spot for Food! I love the Elvis Burger! so many other
