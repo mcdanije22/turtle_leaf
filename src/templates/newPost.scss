@@ -1,0 +1,33 @@
+$desktop: 1024px;
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+.postTitleInfo {
+  padding: 2rem 1rem 1rem 1rem;
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0;
+    color: #4c5469;
+  }
+  p {
+    color: #80889d;
+  }
+  @include desktop {
+    h1 {
+      font-size: 4rem;
+    }
+  }
+}
+.newsPostContent {
+  padding: 2rem 1rem 1rem 1rem;
+  color: #4c5469;
+}
+@include desktop {
+  .postTitleInfo,
+  .newsPostContent {
+    padding: 2rem 0;
+  }
+}

@@ -1,0 +1,33 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Open Sans", sans-serif;
+}
+p {
+  font-family: "Roboto", sans-serif;
+}
+* {
+  line-height: 1.5;
+  line-height: 1.5;
+  letter-spacing: 0.7px;
+}
+.headerPhoto {
+  height: 30vh;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    color: white;
+    font-size: 3rem;
+    margin: 0;
+  }
+}
+#topMenu {
+  padding: 1rem;
+}
