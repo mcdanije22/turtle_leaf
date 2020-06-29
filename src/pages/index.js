@@ -1,6 +1,5 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 import { Button, Row, Col, Carousel } from "antd"
 import {
   MenuOutlined,
@@ -8,10 +7,8 @@ import {
   TwitterOutlined,
   InstagramOutlined,
 } from "@ant-design/icons"
-
-import Layout from "../components/layout"
-import SEO from "../components/seo"
 import "./styles/index.scss"
+import MobileNav from "../components/navBar/MobileNav"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -96,10 +93,21 @@ const IndexPage = () => {
     ), url(${data.landing_photo.childImageSharp.fluid.src})`,
         }}
       >
-        <Button type="link" style={{ padding: "0" }}>
+        {/* <Button type="link" style={{ padding: "0" }}>
           <MenuOutlined style={{ fontSize: "2rem", color: "white" }} />
-        </Button>
-        <Row justify="center" align="middle" style={{ height: "100%" }}>
+        </Button> */}
+        <Row justify="center" align="top" style={{ height: "100%" }}>
+          <Col
+            span={24}
+            style={{
+              display: "flex",
+              justifyContent: "flex-end",
+              padding: "1rem",
+            }}
+          >
+            <MobileNav />
+          </Col>
+          <Col span={8}></Col>
           <Col span={8}></Col>
           <Col span={24}>
             <div id="landingText">
@@ -160,10 +168,6 @@ const IndexPage = () => {
           }}
         ></div>
         <div id="heroPhotoSection">
-          {/* <img
-            src={`${data.test.childImageSharp.fluid.src}`}
-            style={{ height: "300px", width: "380px" }}
-          /> */}
           <h1>Local Food in the Heart of Elmira</h1>
           <Row justify="center" align="middle">
             <Col xs={24} lg={6}>
@@ -172,11 +176,6 @@ const IndexPage = () => {
                   src={`${data.test.childImageSharp.fluid.src}`}
                   className="photoOption"
                 />
-                {/* <Img
-                  fluid={data.tl_sign.childImageSharp.fluid}
-                  className="photoOption"
-                  // style={{ height: "400px", height: "500px" }}
-                /> */}
                 <p>Our Story</p>
               </div>
             </Col>
@@ -208,9 +207,9 @@ const IndexPage = () => {
             <Col xs={24} lg={16}>
               <div id="menu">
                 <h1>Our Menu Favorites</h1>
-                <div id="menuContent">
+                <div id="foodMenuContent">
                   <Row justify="space-around" align="top">
-                    <Col lg={6}>
+                    <Col xs={24} lg={6}>
                       <div id="menuLeftSide">
                         <div className="menuItem">
                           <div className="topPortion">
@@ -222,7 +221,7 @@ const IndexPage = () => {
                         </div>
                       </div>
                     </Col>
-                    <Col lg={6}>
+                    <Col xs={24} lg={6}>
                       <div id="menuRightSide">
                         <div className="menuItem">
                           <div className="topPortion">
@@ -234,7 +233,7 @@ const IndexPage = () => {
                         </div>
                       </div>
                     </Col>
-                    <Col span={18}>
+                    <Col xs={24} lg={18}>
                       <Button size="large" ghost>
                         View Full Menu
                       </Button>

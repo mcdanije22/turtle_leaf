@@ -30,4 +30,9 @@ p {
 }
 #topMenu {
   padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  h3 {
+    margin: 0;
+  }
 }

@@ -17,7 +17,9 @@ const Layout = ({ children }) => {
   return (
     <>
       <div id="topMenu">
-        <MenuOutlined />
+        <MenuOutlined style={{ alignSelf: "center", fontSize: "1rem" }} />
+        <h3>Turtle Leaf Cafe</h3>
+        <h5></h5>
       </div>
       <main>{children}</main>
       <footer>

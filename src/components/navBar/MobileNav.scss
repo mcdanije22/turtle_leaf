@@ -1,0 +1,15 @@
+#menuContent {
+  display: flex;
+  justify-content: space-between;
+}
+.ant-drawer-wrapper-body {
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    text-align: start;
+  }
+}
