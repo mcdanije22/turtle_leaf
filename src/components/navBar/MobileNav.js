@@ -3,7 +3,8 @@ import "./MobileNav.scss"
 import { MenuOutlined, CloseOutlined } from "@ant-design/icons"
 import { Button, Drawer } from "antd"
 
-const MobileNav = () => {
+// passing color as prop to change from white to gray on different pages
+const MobileNav = ({ color }) => {
   const [visible, setVisible] = useState(false)
   const showDrawer = () => {
     setVisible(true)
@@ -16,7 +17,7 @@ const MobileNav = () => {
     <div id="mobileNavContainer">
       <Button type="link" style={{ padding: "0" }}>
         <MenuOutlined
-          style={{ fontSize: "1.5rem", color: "white" }}
+          style={{ fontSize: "1.5rem", color: `${color}` }}
           onClick={() => {
             showDrawer()
           }}

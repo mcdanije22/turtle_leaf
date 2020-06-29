@@ -93,9 +93,6 @@ const IndexPage = () => {
     ), url(${data.landing_photo.childImageSharp.fluid.src})`,
         }}
       >
-        {/* <Button type="link" style={{ padding: "0" }}>
-          <MenuOutlined style={{ fontSize: "2rem", color: "white" }} />
-        </Button> */}
         <Row justify="center" align="top" style={{ height: "100%" }}>
           <Col
             span={24}
@@ -105,7 +102,7 @@ const IndexPage = () => {
               padding: "1rem",
             }}
           >
-            <MobileNav />
+            <MobileNav color="white" />
           </Col>
           <Col span={8}></Col>
           <Col span={8}></Col>

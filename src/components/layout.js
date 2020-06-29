@@ -1,6 +1,8 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { MenuOutlined } from "@ant-design/icons"
+import MobileNav from "../components/navBar/MobileNav"
+import { Link } from "gatsby"
 
 import "./layout.scss"
 
@@ -17,9 +19,11 @@ const Layout = ({ children }) => {
   return (
     <>
       <div id="topMenu">
-        <MenuOutlined style={{ alignSelf: "center", fontSize: "1rem" }} />
-        <h3>Turtle Leaf Cafe</h3>
-        <h5></h5>
+        {/* <h5></h5> */}
+        <Link to="/">
+          <h3>Turtle Leaf Cafe</h3>
+        </Link>
+        <MobileNav color="#4C5469" />
       </div>
       <main>{children}</main>
       <footer>
