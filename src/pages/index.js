@@ -9,6 +9,7 @@ import {
 } from "@ant-design/icons"
 import "./styles/index.scss"
 import MobileNav from "../components/navBar/MobileNav"
+import Img from "gatsby-image"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -143,8 +144,8 @@ const IndexPage = () => {
         <div id="IntroSection">
           <Row justify="center">
             <Col xs={24} lg={6}>
-              {/* <Img fluid={data.adamHeadShot.childImageSharp.fluid} /> */}
-              <img src={`${data.adamHeadShot.childImageSharp.fluid.src}`} />
+              <Img fluid={data.adamHeadShot.childImageSharp.fluid} />
+              {/* <img src={`${data.adamHeadShot.childImageSharp.fluid.src}`} /> */}
             </Col>
             <Col xs={24} lg={6}>
               <div id="introText">
@@ -166,31 +167,34 @@ const IndexPage = () => {
         ></div>
         <div id="heroPhotoSection">
           <h1>Local Food in the Heart of Elmira</h1>
-          <Row justify="center" align="middle">
+          <Row justify="center" align="middle" gutter={[24, 0]}>
             <Col xs={24} lg={6}>
               <div className="optionSection">
-                <img
+                {/* <img
                   src={`${data.test.childImageSharp.fluid.src}`}
                   className="photoOption"
-                />
+                /> */}
+                <Img fluid={data.test.childImageSharp.fluid} />
                 <p>Our Story</p>
               </div>
             </Col>
             <Col xs={24} lg={6}>
               <div className="optionSection">
-                <img
+                {/* <img
                   src={`${data.smoothie.childImageSharp.fluid.src}`}
                   className="photoOption"
-                />
+                /> */}
+                <Img fluid={data.test.childImageSharp.fluid} />
                 <p>Our Food</p>
               </div>
             </Col>
             <Col xs={24} lg={6}>
               <div className="optionSection">
-                <img
+                {/* <img
                   src={`${data.test.childImageSharp.fluid.src}`}
                   className="photoOption"
-                />
+                /> */}
+                <Img fluid={data.test.childImageSharp.fluid} />
                 <p>Vist Us</p>
               </div>
             </Col>
