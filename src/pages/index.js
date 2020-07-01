@@ -10,6 +10,7 @@ import {
 import "./styles/index.scss"
 import MobileNav from "../components/navBar/MobileNav"
 import Img from "gatsby-image"
+import { Link } from "gatsby"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -74,6 +75,27 @@ const IndexPage = () => {
         childImageSharp {
           fluid(quality: 90, maxWidth: 380) {
             ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      allMarkdownRemark {
+        edges {
+          node {
+            id
+            html
+            frontmatter {
+              date
+              slug
+              title
+              featuredImage {
+                childImageSharp {
+                  fluid(quality: 90, maxWidth: 380) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
+            excerpt
           }
         }
       }
@@ -142,7 +164,7 @@ const IndexPage = () => {
       </div>
       <div id="mainContent">
         <div id="IntroSection">
-          <Row justify="center">
+          <Row justify="center" gutter={[48, 0]}>
             <Col xs={24} lg={6}>
               <Img fluid={data.adamHeadShot.childImageSharp.fluid} />
               {/* <img src={`${data.adamHeadShot.childImageSharp.fluid.src}`} /> */}
@@ -162,7 +184,7 @@ const IndexPage = () => {
         <div
           className="photoDivider"
           style={{
-            backgroundImage: `  url(${data.family.childImageSharp.fluid.src})`,
+            backgroundImage: `url(${data.family.childImageSharp.fluid.src})`,
           }}
         ></div>
         <div id="heroPhotoSection">
@@ -220,10 +242,74 @@ const IndexPage = () => {
                           <p>test test test test</p>
                           <hr />
                         </div>
+                        <div className="menuItem">
+                          <div className="topPortion">
+                            <h2>Sandwhich</h2>
+                            <h2>$5.99</h2>
+                          </div>
+                          <p>test test test test</p>
+                          <hr />
+                        </div>
+                        <div className="menuItem">
+                          <div className="topPortion">
+                            <h2>Sandwhich</h2>
+                            <h2>$5.99</h2>
+                          </div>
+                          <p>test test test test</p>
+                          <hr />
+                        </div>
+                        <div className="menuItem">
+                          <div className="topPortion">
+                            <h2>Sandwhich</h2>
+                            <h2>$5.99</h2>
+                          </div>
+                          <p>test test test test</p>
+                          <hr />
+                        </div>
+                        <div className="menuItem">
+                          <div className="topPortion">
+                            <h2>Sandwhich</h2>
+                            <h2>$5.99</h2>
+                          </div>
+                          <p>test test test test</p>
+                          <hr />
+                        </div>
                       </div>
                     </Col>
                     <Col xs={24} lg={6}>
                       <div id="menuRightSide">
+                        <div className="menuItem">
+                          <div className="topPortion">
+                            <h2>Sandwhich</h2>
+                            <h2>$5.99</h2>
+                          </div>
+                          <p>test test test test</p>
+                          <hr />
+                        </div>
+                        <div className="menuItem">
+                          <div className="topPortion">
+                            <h2>Sandwhich</h2>
+                            <h2>$5.99</h2>
+                          </div>
+                          <p>test test test test</p>
+                          <hr />
+                        </div>
+                        <div className="menuItem">
+                          <div className="topPortion">
+                            <h2>Sandwhich</h2>
+                            <h2>$5.99</h2>
+                          </div>
+                          <p>test test test test</p>
+                          <hr />
+                        </div>
+                        <div className="menuItem">
+                          <div className="topPortion">
+                            <h2>Sandwhich</h2>
+                            <h2>$5.99</h2>
+                          </div>
+                          <p>test test test test</p>
+                          <hr />
+                        </div>
                         <div className="menuItem">
                           <div className="topPortion">
                             <h2>Sandwhich</h2>
@@ -274,6 +360,67 @@ const IndexPage = () => {
               <h3>Sharon Sherman-Appleton</h3>
             </div>
           </Carousel>
+        </div>
+        <div id="newsSection">
+          <Row justify="center">
+            <Col xs={24}>
+              <h1>Turtle Leaf Cafe News</h1>
+            </Col>
+            <Col xs={24}>
+              <div className="newsStory">
+                {/* <div className="newsLeftSide">
+                  <Img
+                    fluid={
+                      data.allMarkdownRemark.edges[0].node.frontmatter
+                        .featuredImage.childImageSharp.fluid
+                    }
+                  />
+                </div> */}
+                <div className="newsRightSide">
+                  <h2>
+                    {data.allMarkdownRemark.edges[0].node.frontmatter.date}
+                  </h2>
+                  <h3>
+                    {data.allMarkdownRemark.edges[0].node.frontmatter.title}
+                  </h3>
+                  <p>{data.allMarkdownRemark.edges[0].node.excerpt}</p>
+                  <Link
+                    to={data.allMarkdownRemark.edges[0].node.frontmatter.slug}
+                  >
+                    <Button type="link" style={{ padding: "0" }}>
+                      Read More...
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+              <div className="newsStory">
+                {/* <div className="newsLeftSide">
+                  <Img
+                    fluid={
+                      data.allMarkdownRemark.edges[0].node.frontmatter
+                        .featuredImage.childImageSharp.fluid
+                    }
+                  />
+                </div> */}
+                <div className="newsRightSide">
+                  <h2>
+                    {data.allMarkdownRemark.edges[1].node.frontmatter.date}
+                  </h2>
+                  <h3>
+                    {data.allMarkdownRemark.edges[1].node.frontmatter.title}
+                  </h3>
+                  <p>{data.allMarkdownRemark.edges[1].node.excerpt}</p>
+                  <Link
+                    to={data.allMarkdownRemark.edges[1].node.frontmatter.slug}
+                  >
+                    <Button type="link" style={{ padding: "0" }}>
+                      Read More...
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </Col>
+          </Row>
         </div>
       </div>
     </div>

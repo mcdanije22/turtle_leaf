@@ -1,6 +1,6 @@
 ---
 slug: "/news/market_season"
-date: "2020-06-26"
+date: "Jun 26, 2020"
 title: "Market Season"
 subtitle: "WE WEREN'T SURE"
 featuredImage: test.jpg
