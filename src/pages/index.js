@@ -9,6 +9,7 @@ import {
 } from "@ant-design/icons"
 import "./styles/index.scss"
 import MobileNav from "../components/navBar/MobileNav"
+import Footer from "../components/Footer/Footer"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
 
@@ -426,6 +427,7 @@ const IndexPage = () => {
           </Button>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }
