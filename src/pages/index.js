@@ -59,7 +59,7 @@ const IndexPage = () => {
       }
       test: file(relativePath: { eq: "test.jpg" }) {
         childImageSharp {
-          fluid(quality: 90, maxWidth: 380) {
+          fluid(quality: 90, maxWidth: 1920) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -164,7 +164,7 @@ const IndexPage = () => {
       </div>
       <div id="mainContent">
         <div id="IntroSection">
-          <Row justify="center" gutter={[48, 0]}>
+          <Row justify="center">
             <Col xs={24} lg={6}>
               <Img fluid={data.adamHeadShot.childImageSharp.fluid} />
               {/* <img src={`${data.adamHeadShot.childImageSharp.fluid.src}`} /> */}
@@ -184,7 +184,7 @@ const IndexPage = () => {
         <div
           className="photoDivider"
           style={{
-            backgroundImage: `url(${data.family.childImageSharp.fluid.src})`,
+            backgroundImage: `url(${data.test.childImageSharp.fluid.src})`,
           }}
         ></div>
         <div id="heroPhotoSection">
@@ -421,6 +421,9 @@ const IndexPage = () => {
               </div>
             </Col>
           </Row>
+          <Button type="primary" size="large" style={{ margin: "2rem 0" }}>
+            View all news updates
+          </Button>
         </div>
       </div>
     </div>
