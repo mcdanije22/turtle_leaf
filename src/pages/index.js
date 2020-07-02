@@ -1,8 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { Button, Row, Col, Carousel } from "antd"
+import { Button, Row, Col, Carousel, BackTop } from "antd"
 import {
-  MenuOutlined,
   FacebookOutlined,
   TwitterOutlined,
   InstagramOutlined,
@@ -108,6 +107,7 @@ const IndexPage = () => {
   }
   return (
     <div id="langingPage">
+      <BackTop />
       <div
         id="landingContent"
         style={{
