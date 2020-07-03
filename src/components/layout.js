@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { MenuOutlined } from "@ant-design/icons"
 import MobileNav from "../components/navBar/MobileNav"
 import { Link } from "gatsby"
+import Footer from "../components/Footer/Footer"
 
 import "./layout.scss"
 
@@ -26,11 +27,7 @@ const Layout = ({ children }) => {
         <MobileNav color="#4C5469" />
       </div>
       <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
+      <Footer />
     </>
   )
 }

@@ -52,7 +52,7 @@ const IndexPage = () => {
       }
       adamHeadShot: file(relativePath: { eq: "adam_headshot.jpg" }) {
         childImageSharp {
-          fluid(quality: 90, maxWidth: 380) {
+          fluid(quality: 90, maxWidth: 400) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -165,14 +165,14 @@ const IndexPage = () => {
       </div>
       <div id="mainContent">
         <div id="IntroSection">
-          <Row justify="center">
-            <Col xs={24} lg={6}>
+          <Row justify="center" gutter={[24, 0]}>
+            <Col xs={24} lg={8}>
               <Img fluid={data.adamHeadShot.childImageSharp.fluid} />
               {/* <img src={`${data.adamHeadShot.childImageSharp.fluid.src}`} /> */}
             </Col>
-            <Col xs={24} lg={6}>
+            <Col xs={24} lg={8}>
               <div id="introText">
-                <h2>Welcome back to Turtle Leaf Cafe</h2>
+                <h1>Welcome back to Turtle Leaf Cafe</h1>
                 <p>
                   We believe that food should not only taste good, but be good
                   for you. Providing healthy choices to maintain optimal health
@@ -332,6 +332,92 @@ const IndexPage = () => {
             </Col>
           </Row>
         </div>
+        <div id="newsSection">
+          <h1>Turtle Leaf Cafe News</h1>
+          <Row justify="center">
+            <Col>
+              <div className="newsStory">
+                {/* <div className="newsLeftSide">
+                  <Img
+                    fluid={
+                      data.allMarkdownRemark.edges[0].node.frontmatter
+                        .featuredImage.childImageSharp.fluid
+                    }
+                  />
+                </div> */}
+                {/* <div className="newsRightSide"> */}
+                <h2>{data.allMarkdownRemark.edges[0].node.frontmatter.date}</h2>
+                <h3>
+                  {data.allMarkdownRemark.edges[0].node.frontmatter.title}
+                </h3>
+                <p>{data.allMarkdownRemark.edges[0].node.excerpt}</p>
+                <Link
+                  to={data.allMarkdownRemark.edges[0].node.frontmatter.slug}
+                >
+                  <Button type="link" style={{ padding: "0" }}>
+                    Read More...
+                  </Button>
+                </Link>
+                {/* </div> */}
+              </div>
+            </Col>
+            <Col>
+              <div className="newsStory">
+                {/* <div className="newsLeftSide">
+                  <Img
+                    fluid={
+                      data.allMarkdownRemark.edges[0].node.frontmatter
+                        .featuredImage.childImageSharp.fluid
+                    }
+                  />
+                </div> */}
+                {/* <div className="newsRightSide"> */}
+                <h2>{data.allMarkdownRemark.edges[1].node.frontmatter.date}</h2>
+                <h3>
+                  {data.allMarkdownRemark.edges[1].node.frontmatter.title}
+                </h3>
+                <p>{data.allMarkdownRemark.edges[1].node.excerpt}</p>
+                <Link
+                  to={data.allMarkdownRemark.edges[1].node.frontmatter.slug}
+                >
+                  <Button type="link" style={{ padding: "0" }}>
+                    Read More...
+                  </Button>
+                </Link>
+              </div>
+              {/* </div> */}
+            </Col>
+            <Col>
+              <div className="newsStory">
+                {/* <div className="newsLeftSide">
+                  <Img
+                    fluid={
+                      data.allMarkdownRemark.edges[0].node.frontmatter
+                        .featuredImage.childImageSharp.fluid
+                    }
+                  />
+                </div> */}
+                {/* <div className="newsRightSide"> */}
+                <h2>{data.allMarkdownRemark.edges[2].node.frontmatter.date}</h2>
+                <h3>
+                  {data.allMarkdownRemark.edges[2].node.frontmatter.title}
+                </h3>
+                <p>{data.allMarkdownRemark.edges[2].node.excerpt}</p>
+                <Link
+                  to={data.allMarkdownRemark.edges[2].node.frontmatter.slug}
+                >
+                  <Button type="link" style={{ padding: "0" }}>
+                    Read More...
+                  </Button>
+                </Link>
+                {/* </div> */}
+              </div>
+            </Col>
+          </Row>
+          <Button type="primary" size="large" style={{ margin: "2rem 0" }}>
+            View all news updates
+          </Button>
+        </div>
         <div id="reviewSection">
           <h1>People Love Us!</h1>
           <Carousel autoplay>
@@ -361,70 +447,6 @@ const IndexPage = () => {
               <h3>Sharon Sherman-Appleton</h3>
             </div>
           </Carousel>
-        </div>
-        <div id="newsSection">
-          <Row justify="center">
-            <Col xs={24}>
-              <h1>Turtle Leaf Cafe News</h1>
-            </Col>
-            <Col xs={24}>
-              <div className="newsStory">
-                {/* <div className="newsLeftSide">
-                  <Img
-                    fluid={
-                      data.allMarkdownRemark.edges[0].node.frontmatter
-                        .featuredImage.childImageSharp.fluid
-                    }
-                  />
-                </div> */}
-                <div className="newsRightSide">
-                  <h2>
-                    {data.allMarkdownRemark.edges[0].node.frontmatter.date}
-                  </h2>
-                  <h3>
-                    {data.allMarkdownRemark.edges[0].node.frontmatter.title}
-                  </h3>
-                  <p>{data.allMarkdownRemark.edges[0].node.excerpt}</p>
-                  <Link
-                    to={data.allMarkdownRemark.edges[0].node.frontmatter.slug}
-                  >
-                    <Button type="link" style={{ padding: "0" }}>
-                      Read More...
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-              <div className="newsStory">
-                {/* <div className="newsLeftSide">
-                  <Img
-                    fluid={
-                      data.allMarkdownRemark.edges[0].node.frontmatter
-                        .featuredImage.childImageSharp.fluid
-                    }
-                  />
-                </div> */}
-                <div className="newsRightSide">
-                  <h2>
-                    {data.allMarkdownRemark.edges[1].node.frontmatter.date}
-                  </h2>
-                  <h3>
-                    {data.allMarkdownRemark.edges[1].node.frontmatter.title}
-                  </h3>
-                  <p>{data.allMarkdownRemark.edges[1].node.excerpt}</p>
-                  <Link
-                    to={data.allMarkdownRemark.edges[1].node.frontmatter.slug}
-                  >
-                    <Button type="link" style={{ padding: "0" }}>
-                      Read More...
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-            </Col>
-          </Row>
-          <Button type="primary" size="large" style={{ margin: "2rem 0" }}>
-            View all news updates
-          </Button>
         </div>
       </div>
       <Footer />

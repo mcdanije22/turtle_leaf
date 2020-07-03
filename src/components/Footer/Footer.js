@@ -24,7 +24,7 @@ const Footer = () => {
       <hr />
       <ul id="footerNav">
         <Row justify="center" gutter={[0, 12]}>
-          <Col xs={24}>
+          {/* <Col xs={24}>
             <li>
               <Button type="link" style={{ fontSize: "1.2rem" }}>
                 About
@@ -51,7 +51,7 @@ const Footer = () => {
                 Contact
               </Button>
             </li>
-          </Col>
+          </Col> */}
         </Row>
         <ul id="footerSocial">
           <li>
@@ -68,7 +68,10 @@ const Footer = () => {
       <div id="shopInfo">
         <p>123 Main St Mount Morris, Ny</p>
         <p>555-435-7744</p>
-        <p className="copyRight">&copy; Turtle Leaf Cafe</p>
+        <p className="copyRight">
+          {" "}
+          © {new Date().getFullYear()} Turtle Leaf Cafe
+        </p>
       </div>
     </div>
   )

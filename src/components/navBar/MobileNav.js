@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import "./MobileNav.scss"
 import { MenuOutlined, CloseOutlined } from "@ant-design/icons"
 import { Button, Drawer } from "antd"
+import { Link } from "gatsby"
 
 // passing color as prop to change from white to gray on different pages
 const MobileNav = ({ color }) => {
@@ -32,11 +33,21 @@ const MobileNav = ({ color }) => {
       >
         <div id="menuContent">
           <ul id="sideMenu">
-            <li>home</li>
-            <li>About</li>
-            <li>Announcements</li>
-            <li>Gallery</li>
-            <li>Contact</li>
+            <li>
+              <Link to="/">home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/news">news</Link>
+            </li>
+            <li>
+              <Link to="/gallery">Gallery</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
           </ul>
           <CloseOutlined
             style={{ fontSize: "2rem" }}

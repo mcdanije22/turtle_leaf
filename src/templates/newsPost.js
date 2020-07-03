@@ -27,7 +27,7 @@ export default function Template({ data }) {
           <h1>What's New</h1>
         </div>
         <Row justify="center">
-          <Col xs={24} lg={10}>
+          <Col xs={24} lg={8}>
             <div className="postTitleInfo">
               <h1>{frontmatter.title}</h1>
               {/* <p>{frontmatter.subtitle}</p> */}
@@ -41,7 +41,6 @@ export default function Template({ data }) {
                 }
               />
             </div>
-
             <div
               className="newsPostContent"
               dangerouslySetInnerHTML={{ __html: html }}

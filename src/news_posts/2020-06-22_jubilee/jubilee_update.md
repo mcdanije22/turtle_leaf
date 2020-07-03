@@ -1,7 +1,7 @@
 ---
 slug: "/news/jubilee_update"
 date: "Jun 22, 2020"
-title: "Jubilee Foods POP UP Update"
+title: "Jubilee Update"
 subtitle: "WE WEREN'T SURE"
 featuredImage: test.jpg
 ---

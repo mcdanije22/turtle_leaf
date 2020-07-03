@@ -61,11 +61,12 @@ p {
     #introText {
       // margin-top: 1rem;
       max-width: 375px;
+      @include desktop {
+        p {
+          font-size: 1.5rem;
+        }
+      }
     }
-    // img {
-    //   width: 330px;
-    //   height: 250px;
-    // }
   }
   .photoDivider {
     height: 50vh;
@@ -133,7 +134,7 @@ p {
     }
   }
   #reviewSection {
-    margin: 4rem 1rem;
+    margin: 4rem 1rem 10rem 1rem;
     text-align: center;
     h1 {
       margin-bottom: 4rem;
@@ -159,11 +160,23 @@ p {
     }
   }
   #newsSection {
-    padding: 4rem 1rem;
+    margin: 10rem 1rem;
+    @include desktop {
+      text-align: center;
+    }
+
     .newsStory {
-      max-width: 375px;
+      max-width: 350px;
+      @include desktop {
+        padding: 0 2rem;
+      }
       h2 {
         margin-top: 2rem;
+        font-size: 1rem;
+      }
+
+      h3 {
+        font-size: 1.5rem;
       }
     }
   }

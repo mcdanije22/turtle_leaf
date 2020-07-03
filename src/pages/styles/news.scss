@@ -1,0 +1,27 @@
+$desktop: 1024px;
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+#newsContainer {
+  .headerPhoto {
+    margin-bottom: 4rem;
+  }
+  .newsStory {
+    max-width: 350px;
+    margin: 1rem;
+    @include desktop {
+      padding: 0 2rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      font-size: 1rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+}
