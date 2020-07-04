@@ -17,13 +17,6 @@ const News = () => {
           }
         }
       }
-      test: file(relativePath: { eq: "test.jpg" }) {
-        childImageSharp {
-          fluid(quality: 90, maxWidth: 1920) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       allMarkdownRemark {
         edges {
           node {
@@ -59,7 +52,7 @@ const News = () => {
     ), url(${data.landing_photo.childImageSharp.fluid.src})`,
           }}
         >
-          <h1>What's New</h1>
+          <h1>WHAT'S NEW</h1>
         </div>
         <Row justify="center">
           {data.allMarkdownRemark.edges.map((post, i) => {
@@ -67,7 +60,6 @@ const News = () => {
               <Col key={i}>
                 <div className="newsStory">
                   <Card
-                    style={{ width: 300 }}
                     cover={
                       <Img
                         fluid={

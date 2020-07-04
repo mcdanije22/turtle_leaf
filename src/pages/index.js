@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { Button, Row, Col, Carousel, BackTop } from "antd"
+import { Button, Row, Col, Carousel, BackTop, Card } from "antd"
 import {
   FacebookOutlined,
   TwitterOutlined,
@@ -337,86 +337,105 @@ const IndexPage = () => {
           <Row justify="center">
             <Col>
               <div className="newsStory">
-                {/* <div className="newsLeftSide">
-                  <Img
-                    fluid={
-                      data.allMarkdownRemark.edges[0].node.frontmatter
-                        .featuredImage.childImageSharp.fluid
-                    }
-                  />
-                </div> */}
-                {/* <div className="newsRightSide"> */}
-                <h2>{data.allMarkdownRemark.edges[0].node.frontmatter.date}</h2>
-                <h3>
-                  {data.allMarkdownRemark.edges[0].node.frontmatter.title}
-                </h3>
-                <p>{data.allMarkdownRemark.edges[0].node.excerpt}</p>
-                <Link
-                  to={data.allMarkdownRemark.edges[0].node.frontmatter.slug}
+                <Card
+                  cover={
+                    <Img
+                      fluid={
+                        data.allMarkdownRemark.edges[0].node.frontmatter
+                          .featuredImage.childImageSharp.fluid
+                      }
+                    />
+                  }
                 >
-                  <Button type="link" style={{ padding: "0" }}>
-                    Read More...
-                  </Button>
-                </Link>
-                {/* </div> */}
+                  <div className="newsRightSide">
+                    <p>
+                      {data.allMarkdownRemark.edges[0].node.frontmatter.date}
+                    </p>
+                    <h3>
+                      {data.allMarkdownRemark.edges[0].node.frontmatter.title}
+                    </h3>
+                    <p>{data.allMarkdownRemark.edges[0].node.excerpt}</p>
+                    <Link
+                      to={data.allMarkdownRemark.edges[0].node.frontmatter.slug}
+                    >
+                      <Button type="link" style={{ padding: "0" }}>
+                        Read More...
+                      </Button>
+                    </Link>
+                  </div>
+                </Card>
               </div>
             </Col>
             <Col>
               <div className="newsStory">
-                {/* <div className="newsLeftSide">
-                  <Img
-                    fluid={
-                      data.allMarkdownRemark.edges[0].node.frontmatter
-                        .featuredImage.childImageSharp.fluid
-                    }
-                  />
-                </div> */}
-                {/* <div className="newsRightSide"> */}
-                <h2>{data.allMarkdownRemark.edges[1].node.frontmatter.date}</h2>
-                <h3>
-                  {data.allMarkdownRemark.edges[1].node.frontmatter.title}
-                </h3>
-                <p>{data.allMarkdownRemark.edges[1].node.excerpt}</p>
-                <Link
-                  to={data.allMarkdownRemark.edges[1].node.frontmatter.slug}
+                <Card
+                  cover={
+                    <Img
+                      fluid={
+                        data.allMarkdownRemark.edges[1].node.frontmatter
+                          .featuredImage.childImageSharp.fluid
+                      }
+                    />
+                  }
                 >
-                  <Button type="link" style={{ padding: "0" }}>
-                    Read More...
-                  </Button>
-                </Link>
+                  <div className="newsRightSide">
+                    <p>
+                      {data.allMarkdownRemark.edges[1].node.frontmatter.date}
+                    </p>
+                    <h3>
+                      {data.allMarkdownRemark.edges[1].node.frontmatter.title}
+                    </h3>
+                    <p>{data.allMarkdownRemark.edges[1].node.excerpt}</p>
+                    <Link
+                      to={data.allMarkdownRemark.edges[1].node.frontmatter.slug}
+                    >
+                      <Button type="link" style={{ padding: "0" }}>
+                        Read More...
+                      </Button>
+                    </Link>
+                  </div>
+                </Card>
               </div>
-              {/* </div> */}
             </Col>
             <Col>
               <div className="newsStory">
-                {/* <div className="newsLeftSide">
-                  <Img
-                    fluid={
-                      data.allMarkdownRemark.edges[0].node.frontmatter
-                        .featuredImage.childImageSharp.fluid
-                    }
-                  />
-                </div> */}
-                {/* <div className="newsRightSide"> */}
-                <h2>{data.allMarkdownRemark.edges[2].node.frontmatter.date}</h2>
-                <h3>
-                  {data.allMarkdownRemark.edges[2].node.frontmatter.title}
-                </h3>
-                <p>{data.allMarkdownRemark.edges[2].node.excerpt}</p>
-                <Link
-                  to={data.allMarkdownRemark.edges[2].node.frontmatter.slug}
+                <Card
+                  cover={
+                    <Img
+                      fluid={
+                        data.allMarkdownRemark.edges[2].node.frontmatter
+                          .featuredImage.childImageSharp.fluid
+                      }
+                    />
+                  }
                 >
-                  <Button type="link" style={{ padding: "0" }}>
-                    Read More...
-                  </Button>
-                </Link>
-                {/* </div> */}
+                  <div className="newsRightSide">
+                    <p>
+                      {data.allMarkdownRemark.edges[2].node.frontmatter.date}
+                    </p>
+                    <h3>
+                      {data.allMarkdownRemark.edges[2].node.frontmatter.title}
+                    </h3>
+                    <p>{data.allMarkdownRemark.edges[2].node.excerpt}</p>
+                    <Link
+                      to={data.allMarkdownRemark.edges[2].node.frontmatter.slug}
+                    >
+                      <Button type="link" style={{ padding: "0" }}>
+                        Read More...
+                      </Button>
+                    </Link>
+                  </div>
+                </Card>
               </div>
             </Col>
           </Row>
-          <Button type="primary" size="large" style={{ margin: "2rem 0" }}>
-            View all news updates
-          </Button>
+          <div id="newsButtonContainer">
+            <Link to="/news">
+              <Button type="primary" size="large" style={{ margin: "2rem 0" }}>
+                View all news updates
+              </Button>
+            </Link>
+          </div>
         </div>
         <div id="reviewSection">
           <h1>People Love Us!</h1>
