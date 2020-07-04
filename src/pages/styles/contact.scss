@@ -1,0 +1,12 @@
+#contactContainer {
+  .headerPhoto {
+    margin-bottom: 4rem;
+  }
+  #contactInfo {
+    #contactSocialList {
+      list-style: none;
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+}

@@ -50,7 +50,7 @@ const MobileNav = ({ color }) => {
             </li>
           </ul>
           <CloseOutlined
-            style={{ fontSize: "2rem" }}
+            style={{ fontSize: "1.5rem", color: "black" }}
             onClick={() => {
               onClose()
             }}
