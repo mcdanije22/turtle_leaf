@@ -1,12 +1,40 @@
-#contactContainer {
-  .headerPhoto {
-    margin-bottom: 4rem;
+$desktop: 1024px;
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
   }
-  #contactInfo {
-    #contactSocialList {
-      list-style: none;
-      display: flex;
-      justify-content: space-evenly;
+}
+
+#contactContainer {
+  #ContactForm_message {
+    height: 200px;
+  }
+  #contactMainInfo {
+    padding: 0 1rem;
+    #contactInfo {
+      margin-bottom: 2rem;
+      #contactSocialList {
+        list-style: none;
+        display: flex;
+        padding: 0;
+        li {
+          margin-right: 0.5rem;
+          a {
+            color: #2c2b2b;
+          }
+          .anticon {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+    #googleMaps {
+      height: 400px;
+      width: 100%;
+      border: 0;
+      @include desktop {
+        height: 600px;
+      }
     }
   }
 }
