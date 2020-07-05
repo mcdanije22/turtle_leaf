@@ -6,6 +6,7 @@ import {
   TwitterOutlined,
   InstagramOutlined,
 } from "@ant-design/icons"
+import { Link } from "gatsby"
 
 const Footer = () => {
   return (
@@ -55,13 +56,19 @@ const Footer = () => {
         </Row>
         <ul id="footerSocial">
           <li>
-            <FacebookOutlined />
+            <Link to="/">
+              <FacebookOutlined />
+            </Link>
           </li>
           <li>
-            <TwitterOutlined />
+            <Link to="/">
+              <TwitterOutlined />
+            </Link>
           </li>
           <li>
-            <InstagramOutlined />
+            <Link to="/">
+              <InstagramOutlined />
+            </Link>
           </li>
         </ul>
       </ul>

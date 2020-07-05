@@ -144,19 +144,25 @@ const IndexPage = () => {
               </Button>
               <ul id="bottomSocial">
                 <li>
-                  <Button shape="circle" ghost size="large">
-                    <FacebookOutlined />
-                  </Button>
+                  <Link to="/">
+                    <Button shape="circle" ghost size="large">
+                      <FacebookOutlined />
+                    </Button>
+                  </Link>
                 </li>
                 <li>
-                  <Button shape="circle" ghost size="large">
-                    <TwitterOutlined />
-                  </Button>
+                  <Link to="/">
+                    <Button shape="circle" ghost size="large">
+                      <TwitterOutlined />
+                    </Button>
+                  </Link>
                 </li>
                 <li>
-                  <Button shape="circle" ghost size="large">
-                    <InstagramOutlined />
-                  </Button>
+                  <Link to="/">
+                    <Button shape="circle" ghost size="large">
+                      <InstagramOutlined />
+                    </Button>
+                  </Link>
                 </li>
               </ul>
             </div>
