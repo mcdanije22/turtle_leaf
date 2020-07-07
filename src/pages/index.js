@@ -118,18 +118,34 @@ const IndexPage = () => {
         }}
       >
         <Row justify="center" align="top" style={{ height: "100%" }}>
-          <Col
-            span={24}
-            style={{
-              display: "flex",
-              justifyContent: "flex-end",
-              padding: "1rem",
-            }}
-          >
+          <Col span={24} style={{ padding: "1rem 1rem 0 0" }}>
             <MobileNav color="white" />
+            <div id="landingPageNav">
+              <ul id="nav">
+                <li>
+                  <p>
+                    <Link to="/about">About</Link>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <Link to="/">Menu</Link>
+                  </p>
+                </li>
+                <li>
+                  <Link to="/News">News</Link>
+                </li>
+                <li>
+                  <Link to="/Gallery">Gallery</Link>
+                </li>
+                <li>
+                  <Link to="/Contact">Contact</Link>
+                </li>
+              </ul>
+            </div>
           </Col>
           <Col span={8}></Col>
-          <Col span={8}></Col>
+          {/* <Col span={8}></Col> */}
           <Col span={24}>
             <div id="landingText">
               <h3>Welcome to</h3>
@@ -450,7 +466,7 @@ const IndexPage = () => {
               <p>
                 "Great spot for Food! I love the Elvis Burger! so many other
                 great flatbreads, very creative and unique. Adam runs an
-                excellent establishment!""
+                excellent establishment!"
               </p>
               <h3>Craig Colwell</h3>
             </div>
@@ -467,7 +483,7 @@ const IndexPage = () => {
               <p>
                 "This is the most caring people I have ever met they actually
                 care about their customers you not just another sale here! I’d
-                recommend this place to anyone!!""
+                recommend this place to anyone!!"
               </p>
               <h3>Sharon Sherman-Appleton</h3>
             </div>

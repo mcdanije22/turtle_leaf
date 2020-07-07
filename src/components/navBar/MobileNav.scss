@@ -1,8 +1,22 @@
+$desktop: 1024px;
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+#mobileNavContainer {
+  display: flex;
+  justify-content: flex-end;
+  @include desktop {
+    display: none;
+  }
+}
 #menuContent {
   display: flex;
   justify-content: space-between;
 }
 .ant-drawer-wrapper-body {
+  font-family: "Open Sans", sans-serif;
   ul {
     list-style: none;
     padding: 0;
@@ -13,6 +27,6 @@
     text-align: start;
   }
   a {
-    color: black;
+    color: #585858;
   }
 }

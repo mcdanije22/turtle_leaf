@@ -10,11 +10,8 @@ $desktop: 1024px;
   h1 {
     font-size: 2rem;
     margin-bottom: 0;
-    color: #4c5469;
   }
-  p {
-    color: #80889d;
-  }
+
   @include desktop {
     h1 {
       font-size: 4rem;
@@ -23,7 +20,6 @@ $desktop: 1024px;
 }
 .newsPostContent {
   padding: 2rem 1rem 1rem 1rem;
-  color: #4c5469;
 }
 @include desktop {
   .postTitleInfo,
