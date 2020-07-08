@@ -7,6 +7,7 @@ $desktop: 1024px;
 #mobileNavContainer {
   display: flex;
   justify-content: flex-end;
+  padding: 1rem;
   @include desktop {
     display: none;
   }

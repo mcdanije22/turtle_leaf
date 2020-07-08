@@ -1,0 +1,31 @@
+$desktop: 1024px;
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+#desktopNavContainer {
+  display: none;
+  @include desktop {
+    display: flex;
+  }
+  #desktopNav {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+    li {
+      padding: 0 0.5rem;
+      a {
+        color: #585858;
+      }
+      a:hover {
+        color: black;
+      }
+    }
+    .activeNav {
+      color: black;
+    }
+  }
+}

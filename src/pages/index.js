@@ -118,28 +118,24 @@ const IndexPage = () => {
         }}
       >
         <Row justify="center" align="top" style={{ height: "100%" }}>
-          <Col span={24} style={{ padding: "1rem 1rem 0 0" }}>
+          <Col span={24}>
             <MobileNav color="white" />
             <div id="landingPageNav">
               <ul id="nav">
                 <li>
-                  <p>
-                    <Link to="/about">About</Link>
-                  </p>
+                  <Link to="/about">About</Link>
                 </li>
                 <li>
-                  <p>
-                    <Link to="/">Menu</Link>
-                  </p>
+                  <Link to="/">Menu</Link>
                 </li>
                 <li>
-                  <Link to="/News">News</Link>
+                  <Link to="/news">News</Link>
                 </li>
                 <li>
-                  <Link to="/Gallery">Gallery</Link>
+                  <Link to="/gallery">Gallery</Link>
                 </li>
                 <li>
-                  <Link to="/Contact">Contact</Link>
+                  <Link to="/contact">Contact</Link>
                 </li>
               </ul>
             </div>
@@ -220,7 +216,7 @@ const IndexPage = () => {
                   className="photoOption"
                 /> */}
                 <Img fluid={data.test.childImageSharp.fluid} />
-                <p>Our Story</p>
+                <h2>Our Story</h2>
               </div>
             </Col>
             <Col xs={24} lg={6}>
@@ -230,7 +226,7 @@ const IndexPage = () => {
                   className="photoOption"
                 /> */}
                 <Img fluid={data.test.childImageSharp.fluid} />
-                <p>Our Food</p>
+                <h2>Our Food</h2>
               </div>
             </Col>
             <Col xs={24} lg={6}>
@@ -240,7 +236,7 @@ const IndexPage = () => {
                   className="photoOption"
                 /> */}
                 <Img fluid={data.test.childImageSharp.fluid} />
-                <p>Vist Us</p>
+                <h2>Vist Us</h2>
               </div>
             </Col>
           </Row>
@@ -468,7 +464,7 @@ const IndexPage = () => {
                 great flatbreads, very creative and unique. Adam runs an
                 excellent establishment!"
               </p>
-              <h3>Craig Colwell</h3>
+              <h3>- Craig Colwell</h3>
             </div>
             <div className="review">
               <p>
@@ -477,7 +473,7 @@ const IndexPage = () => {
                 Bistro Roast Beef. Can't wait to try Strawberry Turkey Brie
                 Panini"
               </p>
-              <h3>Kathy Ring Tutak</h3>
+              <h3>- Kathy Ring Tutak</h3>
             </div>
             <div className="review">
               <p>
@@ -485,7 +481,7 @@ const IndexPage = () => {
                 care about their customers you not just another sale here! I’d
                 recommend this place to anyone!!"
               </p>
-              <h3>Sharon Sherman-Appleton</h3>
+              <h3>- Sharon Sherman-Appleton</h3>
             </div>
           </Carousel>
         </div>

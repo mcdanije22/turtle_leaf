@@ -1,4 +1,9 @@
-$defaultFontColor: #585858;
+$desktop: 1024px;
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
 h1,
 h2,
 h3,
@@ -34,14 +39,20 @@ p {
   }
 }
 #topMenu {
-  padding: 1rem;
   display: flex;
-  justify-content: space-between;
-
+  justify-content: flex-end;
+  @include desktop {
+    justify-content: space-between;
+    padding: 1rem;
+  }
   h3,
   a {
     margin: 0;
     align-self: center;
     font-weight: bold;
+    display: none;
+    @include desktop {
+      display: block;
+    }
   }
 }
