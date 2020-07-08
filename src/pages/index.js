@@ -183,7 +183,7 @@ const IndexPage = () => {
       </div>
       <div id="mainContent">
         <div id="IntroSection">
-          <Row justify="center" gutter={[24, 0]}>
+          <Row justify="center" gutter={[24, 0]} align="middle">
             <Col xs={24} lg={8}>
               <Img fluid={data.adamHeadShot.childImageSharp.fluid} />
               {/* <img src={`${data.adamHeadShot.childImageSharp.fluid.src}`} /> */}
@@ -210,34 +210,40 @@ const IndexPage = () => {
           <h1>Local Food in the Heart of Elmira</h1>
           <Row justify="center" align="middle" gutter={[24, 0]}>
             <Col xs={24} lg={6}>
-              <div className="optionSection">
-                {/* <img
+              <Link to="/about">
+                <div className="optionSection">
+                  {/* <img
                   src={`${data.test.childImageSharp.fluid.src}`}
                   className="photoOption"
                 /> */}
-                <Img fluid={data.test.childImageSharp.fluid} />
-                <h2>Our Story</h2>
-              </div>
+                  <Img fluid={data.test.childImageSharp.fluid} />
+                  <h2>Our Story</h2>
+                </div>
+              </Link>
             </Col>
             <Col xs={24} lg={6}>
-              <div className="optionSection">
-                {/* <img
+              <Link to="/menu">
+                <div className="optionSection">
+                  {/* <img
                   src={`${data.smoothie.childImageSharp.fluid.src}`}
                   className="photoOption"
                 /> */}
-                <Img fluid={data.test.childImageSharp.fluid} />
-                <h2>Our Food</h2>
-              </div>
+                  <Img fluid={data.test.childImageSharp.fluid} />
+                  <h2>Our Food</h2>
+                </div>
+              </Link>
             </Col>
             <Col xs={24} lg={6}>
-              <div className="optionSection">
-                {/* <img
+              <Link to="/contact">
+                <div className="optionSection">
+                  {/* <img
                   src={`${data.test.childImageSharp.fluid.src}`}
                   className="photoOption"
                 /> */}
-                <Img fluid={data.test.childImageSharp.fluid} />
-                <h2>Vist Us</h2>
-              </div>
+                  <Img fluid={data.test.childImageSharp.fluid} />
+                  <h2>Vist Us</h2>
+                </div>
+              </Link>
             </Col>
           </Row>
         </div>
@@ -464,7 +470,9 @@ const IndexPage = () => {
                 great flatbreads, very creative and unique. Adam runs an
                 excellent establishment!"
               </p>
-              <h3>- Craig Colwell</h3>
+              <h3>
+                <b> Craig Colwell</b>
+              </h3>
             </div>
             <div className="review">
               <p>
@@ -473,7 +481,9 @@ const IndexPage = () => {
                 Bistro Roast Beef. Can't wait to try Strawberry Turkey Brie
                 Panini"
               </p>
-              <h3>- Kathy Ring Tutak</h3>
+              <h3>
+                <b> Kathy Ring Tutak</b>
+              </h3>
             </div>
             <div className="review">
               <p>
@@ -481,7 +491,9 @@ const IndexPage = () => {
                 care about their customers you not just another sale here! I’d
                 recommend this place to anyone!!"
               </p>
-              <h3>- Sharon Sherman-Appleton</h3>
+              <h3>
+                <b> Sharon Sherman-Appleton</b>
+              </h3>
             </div>
           </Carousel>
         </div>
