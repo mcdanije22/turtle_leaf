@@ -68,8 +68,20 @@ const Gallery = () => {
         {isOpen && (
           <Lightbox
             mainSrc={data.allImageSharp.edges[photoIndex].node.fluid.src}
-            nextSrc={data.allImageSharp.edges[photoIndex].node.fluid.src}
-            prevSrc={data.allImageSharp.edges[photoIndex].node.fluid.src}
+            nextSrc={
+              data.allImageSharp.edges[
+                photoIndex + 1 > data.allImageSharp.edges.length - 1
+                  ? 0
+                  : photoIndex + 1
+              ].node.fluid.src
+            }
+            prevSrc={
+              data.allImageSharp.edges[
+                photoIndex === 0
+                  ? data.allImageSharp.edges.length - 1
+                  : photoIndex - 1
+              ].node.fluid.src
+            }
             onCloseRequest={() => setOpenStatus(false)}
             onMovePrevRequest={() =>
               setIndex(
