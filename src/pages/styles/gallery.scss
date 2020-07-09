@@ -1,0 +1,18 @@
+$desktop: 1024px;
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+#galleryContainer {
+  #galleryPhotos {
+    padding: 0 1rem;
+    @include desktop {
+      padding: 0 14rem;
+    }
+    .gatsby-image-wrapper {
+      width: auto;
+      height: 250px;
+    }
+  }
+}

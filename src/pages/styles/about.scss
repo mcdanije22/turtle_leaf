@@ -1,0 +1,19 @@
+$desktop: 1024px;
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+#aboutContainer {
+  #aboutText {
+    padding: 0 1rem;
+    max-width: 600px;
+    h1 {
+      margin: 1rem 0 0 0;
+      font-size: 2rem;
+      @include desktop {
+        margin: 0;
+      }
+    }
+  }
+}

@@ -186,7 +186,6 @@ const IndexPage = () => {
           <Row justify="center" gutter={[24, 0]} align="middle">
             <Col xs={24} lg={8}>
               <Img fluid={data.adamHeadShot.childImageSharp.fluid} />
-              {/* <img src={`${data.adamHeadShot.childImageSharp.fluid.src}`} /> */}
             </Col>
             <Col xs={24} lg={8}>
               <div id="introText">
