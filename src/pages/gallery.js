@@ -28,6 +28,17 @@ const Gallery = () => {
           }
         }
       }
+      allFile(filter: { relativeDirectory: { eq: "gallery_photos" } }) {
+        edges {
+          node {
+            childImageSharp {
+              fluid(quality: 90, maxWidth: 1920) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
     }
   `)
   console.log(data)
@@ -48,7 +59,7 @@ const Gallery = () => {
         </div>
         <div id="galleryPhotos">
           <Row gutter={[24, 20]}>
-            {data.allImageSharp.edges.map((image, i) => {
+            {data.allFile.edges.map((image, i) => {
               return (
                 <Col
                   xs={24}
@@ -59,7 +70,7 @@ const Gallery = () => {
                     setOpenStatus(true)
                   }}
                 >
-                  <Img fluid={image.node.fluid} />
+                  <Img fluid={image.node.childImageSharp.fluid} />
                 </Col>
               )
             })}
@@ -67,32 +78,34 @@ const Gallery = () => {
         </div>
         {isOpen && (
           <Lightbox
-            mainSrc={data.allImageSharp.edges[photoIndex].node.fluid.src}
+            mainSrc={
+              data.allFile.edges[photoIndex].node.childImageSharp.fluid.src
+            }
             nextSrc={
-              data.allImageSharp.edges[
-                photoIndex + 1 > data.allImageSharp.edges.length - 1
+              data.allFile.edges[
+                photoIndex + 1 > data.allFile.edges.length - 1
                   ? 0
                   : photoIndex + 1
-              ].node.fluid.src
+              ].node.childImageSharp.fluid.src
             }
             prevSrc={
-              data.allImageSharp.edges[
+              data.allFile.edges[
                 photoIndex === 0
-                  ? data.allImageSharp.edges.length - 1
+                  ? data.allFile.edges.length - 1
                   : photoIndex - 1
-              ].node.fluid.src
+              ].node.childImageSharp.fluid.src
             }
             onCloseRequest={() => setOpenStatus(false)}
             onMovePrevRequest={() =>
               setIndex(
                 photoIndex === 0
-                  ? data.allImageSharp.edges.length - 1
+                  ? data.allFile.edges.length - 1
                   : photoIndex - 1
               )
             }
             onMoveNextRequest={() =>
               setIndex(
-                photoIndex + 1 > data.allImageSharp.edges.length - 1
+                photoIndex + 1 > data.allFile.edges.length - 1
                   ? 0
                   : photoIndex + 1
               )
