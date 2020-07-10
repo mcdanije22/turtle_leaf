@@ -50,7 +50,7 @@ const IndexPage = () => {
           }
         }
       }
-      adamHeadShot: file(relativePath: { eq: "adam_headshot.jpg" }) {
+      aboutStoreFront: file(relativePath: { eq: "about_store_front.jpg" }) {
         childImageSharp {
           fluid(quality: 90, maxWidth: 400) {
             ...GatsbyImageSharpFluid
@@ -101,7 +101,6 @@ const IndexPage = () => {
       }
     }
   `)
-  console.log(data)
   function onChange(a, b, c) {
     console.log(a, b, c)
   }
@@ -141,7 +140,6 @@ const IndexPage = () => {
             </div>
           </Col>
           <Col span={8}></Col>
-          {/* <Col span={8}></Col> */}
           <Col span={24}>
             <div id="landingText">
               <h3>Welcome to</h3>
@@ -183,19 +181,26 @@ const IndexPage = () => {
       </div>
       <div id="mainContent">
         <div id="IntroSection">
-          <Row justify="center" gutter={[24, 0]} align="middle">
+          <Row justify="center" gutter={[24, 0]}>
             <Col xs={24} lg={8}>
-              <Img fluid={data.adamHeadShot.childImageSharp.fluid} />
+              <Img fluid={data.aboutStoreFront.childImageSharp.fluid} />
             </Col>
-            <Col xs={24} lg={8}>
+            <Col lg={1}></Col>
+            <Col>
               <div id="introText">
                 <h1>Welcome back to Turtle Leaf Cafe</h1>
+                <hr />
                 <p>
                   We believe that food should not only taste good, but be good
                   for you. Providing healthy choices to maintain optimal health
                   for our customers is our priorty. Stop in today!
                 </p>
               </div>
+              <Link to="/about">
+                <Button shape="round" ghost size="large" type="primary">
+                  Learn More
+                </Button>
+              </Link>
             </Col>
           </Row>
         </div>

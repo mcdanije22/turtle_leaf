@@ -39,10 +39,11 @@ const About = () => {
           <h1>Our Story</h1>
         </div>
         <div id="aboutMainContent">
-          <Row justify="center" gutter={[24, 0]} align="top">
+          <Row justify="center" align="top">
             <Col xs={24} lg={8}>
               <Img fluid={data.adamHeadShot.childImageSharp.fluid} />
             </Col>
+            <Col lg={1}></Col>
             <Col xs={24} lg={8}>
               <div id="aboutText">
                 <h1> Meet the Business Owner </h1>
@@ -80,9 +81,7 @@ const About = () => {
                   Elmira. We are very optimistic that the best is still yet to
                   come, not just for TLC but for our city in general.
                 </p>
-                <p>
-                  <h1> #weareelmira</h1>
-                </p>
+                <h1> #weareelmira</h1>
               </div>
             </Col>
           </Row>

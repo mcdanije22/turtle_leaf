@@ -34,13 +34,13 @@ const MobileNav = ({ color }) => {
         <div id="menuContent">
           <ul id="sideMenu">
             <li>
-              <Link to="/">home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/about">About</Link>
             </li>
             <li>
-              <Link to="/news">news</Link>
+              <Link to="/news">News</Link>
             </li>
             <li>
               <Link to="/gallery">Gallery</Link>

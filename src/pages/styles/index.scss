@@ -81,17 +81,24 @@ p {
     }
   }
   #IntroSection {
-    margin: 8rem 1rem 6rem 1rem;
+    margin: 8rem 1rem;
+    @include desktop {
+    }
     #introText {
       // margin-top: 1rem;
       max-width: 500px;
+      hr {
+        margin-right: 16rem;
+        margin-bottom: 2rem;
+      }
       h1 {
         margin-top: 2rem;
+        margin-bottom: 1rem;
       }
+
       @include desktop {
         h1 {
-          margin: 0;
-          margin-bottom: 1rem;
+          margin-top: 0;
         }
         p {
           font-size: 1.2rem;
