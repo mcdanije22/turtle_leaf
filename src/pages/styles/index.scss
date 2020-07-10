@@ -116,12 +116,19 @@ p {
     }
   }
   #heroPhotoSection {
-    margin: 6rem 1rem;
+    margin: 10rem 1rem;
     text-align: center;
     @include desktop {
       margin: 10rem 1rem;
     }
     .optionSection {
+      .gatsby-image-wrapper {
+        height: 250px;
+        width: 300px;
+        @include desktop {
+          width: 400px;
+        }
+      }
       h2 {
         margin-top: 1rem;
       }
@@ -129,18 +136,10 @@ p {
     h1 {
       font-size: 1.2rem;
       margin-bottom: 2rem;
-      // letter-spacing: 0.2rem;
       @include desktop {
         font-size: 2rem;
         margin-bottom: 4rem;
       }
-    }
-    .photoOption {
-      margin: 1rem 0;
-      width: 350px;
-      height: 250px;
-      //   max-height: 250px;
-      //   max-width: 350px;
     }
   }
   #menuSection {

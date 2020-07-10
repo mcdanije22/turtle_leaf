@@ -36,6 +36,13 @@ const IndexPage = () => {
           }
         }
       }
+      customers: file(relativePath: { eq: "customers.jpg" }) {
+        childImageSharp {
+          fluid(quality: 100, maxWidth: 380) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       salad: file(relativePath: { eq: "salad.jpg" }) {
         childImageSharp {
           fluid(quality: 90, maxWidth: 1920) {
@@ -104,6 +111,7 @@ const IndexPage = () => {
   function onChange(a, b, c) {
     console.log(a, b, c)
   }
+  console.log(data)
   return (
     <div id="langingPage">
       <BackTop />
@@ -213,44 +221,33 @@ const IndexPage = () => {
         <div id="heroPhotoSection">
           <h1>Local Food in the Heart of Elmira</h1>
           <Row justify="center" align="middle" gutter={[24, 0]}>
-            <Col xs={24} lg={6}>
+            <Col>
               <Link to="/about">
                 <div className="optionSection">
-                  {/* <img
-                  src={`${data.test.childImageSharp.fluid.src}`}
-                  className="photoOption"
-                /> */}
-                  <Img fluid={data.test.childImageSharp.fluid} />
+                  <Img fluid={data.tl_sign.childImageSharp.fluid} />
                   <h2>Our Story</h2>
                 </div>
               </Link>
             </Col>
-            <Col xs={24} lg={6}>
+            <Col>
               <Link to="/menu">
                 <div className="optionSection">
-                  {/* <img
-                  src={`${data.smoothie.childImageSharp.fluid.src}`}
-                  className="photoOption"
-                /> */}
-                  <Img fluid={data.test.childImageSharp.fluid} />
+                  <Img fluid={data.smoothie.childImageSharp.fluid} />
                   <h2>Our Food</h2>
                 </div>
               </Link>
             </Col>
-            <Col xs={24} lg={6}>
+            <Col>
               <Link to="/contact">
                 <div className="optionSection">
-                  {/* <img
-                  src={`${data.test.childImageSharp.fluid.src}`}
-                  className="photoOption"
-                /> */}
-                  <Img fluid={data.test.childImageSharp.fluid} />
+                  <Img fluid={data.customers.childImageSharp.fluid} />
                   <h2>Vist Us</h2>
                 </div>
               </Link>
             </Col>
           </Row>
         </div>
+
         <div id="menuSection">
           <Row>
             <Col xs={24} lg={8}>
