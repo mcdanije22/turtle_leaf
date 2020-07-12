@@ -168,6 +168,10 @@ p {
         }
         h2 {
           color: white;
+          font-size: 1rem;
+          @include desktop {
+            font-size: 1.3rem;
+          }
         }
         p {
           color: #8a8a8a;

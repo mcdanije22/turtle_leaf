@@ -41,9 +41,8 @@ p {
 }
 #topMenu {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   @include desktop {
-    justify-content: space-between;
     padding: 1rem;
   }
   h3,
@@ -51,9 +50,10 @@ p {
     margin: 0;
     align-self: center;
     font-weight: bold;
-    display: none;
+    padding-left: 0.5rem;
     @include desktop {
       display: block;
+      padding-left: 0;
     }
   }
 }

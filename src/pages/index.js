@@ -17,7 +17,7 @@ const IndexPage = () => {
     query {
       landing_photo: file(relativePath: { eq: "landing_photo2.jpg" }) {
         childImageSharp {
-          fluid(quality: 90, maxWidth: 1920) {
+          fluid(quality: 50, maxWidth: 1920) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -59,28 +59,28 @@ const IndexPage = () => {
       }
       aboutStoreFront: file(relativePath: { eq: "about_store_front.jpg" }) {
         childImageSharp {
-          fluid(quality: 90, maxWidth: 400) {
+          fluid(quality: 50, maxWidth: 400) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       test: file(relativePath: { eq: "test.jpg" }) {
         childImageSharp {
-          fluid(quality: 90, maxWidth: 1920) {
+          fluid(quality: 50, maxWidth: 1920) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       smoothie: file(relativePath: { eq: "smoothie.jpg" }) {
         childImageSharp {
-          fluid(quality: 90, maxWidth: 400) {
+          fluid(quality: 50, maxWidth: 400) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       wrap: file(relativePath: { eq: "wrap.jpg" }) {
         childImageSharp {
-          fluid(quality: 90, maxWidth: 1920) {
+          fluid(quality: 50, maxWidth: 1920) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -263,11 +263,11 @@ const IndexPage = () => {
                 <h1>Our Menu Favorites</h1>
                 <div id="foodMenuContent">
                   <Row justify="space-around" align="top">
-                    <Col xs={24} lg={6}>
+                    <Col xs={24} lg={8}>
                       <div id="menuLeftSide">
                         <div className="menuItem">
                           <div className="topPortion">
-                            <h2>Beef and Mushroom</h2>
+                            <h2>Beef and Mushroom Panini</h2>
                             <h2>$9.49</h2>
                           </div>
                           <p>Beef, Provolone, Spinach, and Mushrooms</p>
@@ -275,83 +275,88 @@ const IndexPage = () => {
                         </div>
                         <div className="menuItem">
                           <div className="topPortion">
-                            <h2>Sandwhich</h2>
-                            <h2>$5.99</h2>
+                            <h2>Turtle Burger</h2>
+                            <h2>$10.42</h2>
                           </div>
-                          <p>test test test test</p>
+                          <p>Zucchini, Onion, Tomato, Spinach, Hummus</p>
                           <hr />
                         </div>
                         <div className="menuItem">
                           <div className="topPortion">
-                            <h2>Sandwhich</h2>
-                            <h2>$5.99</h2>
+                            <h2>Spicy Chicken Flatbread</h2>
+                            <h2>$10.42</h2>
                           </div>
-                          <p>test test test test</p>
+                          <p>
+                            Ricotta, Grilled Chicken, Hot Sauce, Blue Cheese,
+                            Mozzarella
+                          </p>
                           <hr />
                         </div>
                         <div className="menuItem">
                           <div className="topPortion">
-                            <h2>Sandwhich</h2>
-                            <h2>$5.99</h2>
+                            <h2>Pizza Burger</h2>
+                            <h2>$10.42</h2>
                           </div>
-                          <p>test test test test</p>
+                          <p>Pizza Sauce, Red Peppers, Lettuce, Mozzarella</p>
                           <hr />
                         </div>
                         <div className="menuItem">
                           <div className="topPortion">
-                            <h2>Sandwhich</h2>
-                            <h2>$5.99</h2>
+                            <h2>Spicy Chicken Flatbread</h2>
+                            <h2>$10.42</h2>
                           </div>
-                          <p>test test test test</p>
+                          <p>
+                            Ricotta, Grilled Chicken, Hot Sauce, Blue Cheese,
+                            Mozzarella
+                          </p>
                           <hr />
                         </div>
                       </div>
                     </Col>
-                    <Col xs={24} lg={6}>
+                    <Col xs={24} lg={8}>
                       <div id="menuRightSide">
                         <div className="menuItem">
                           <div className="topPortion">
-                            <h2>Sandwhich</h2>
-                            <h2>$5.99</h2>
+                            <h2>Chicken Salad Pita</h2>
+                            <h2>$9.03</h2>
                           </div>
-                          <p>test test test test</p>
+                          <p>
+                            White Meat Chicken, Mayo, Apple, Grapes & Craisins
+                          </p>
                           <hr />
                         </div>
                         <div className="menuItem">
                           <div className="topPortion">
-                            <h2>Sandwhich</h2>
-                            <h2>$5.99</h2>
+                            <h2>Vanilla Chai Smoothie</h2>
+                            <h2>$6.02</h2>
                           </div>
-                          <p>test test test test</p>
+                          <p>
+                            Chai Spice, Vanilla Syrup, Milk, Banana, Brown Sugar
+                          </p>
                           <hr />
                         </div>
                         <div className="menuItem">
                           <div className="topPortion">
-                            <h2>Sandwhich</h2>
-                            <h2>$5.99</h2>
+                            <h2>Chocolate Peanut Butter</h2>
+                            <h2>$6.02</h2>
                           </div>
-                          <p>test test test test</p>
+                          <p>
+                            Chocolate Protein Powder, Peanut Butter, Milk,
+                            Yogurt
+                          </p>
                           <hr />
                         </div>
                         <div className="menuItem">
                           <div className="topPortion">
-                            <h2>Sandwhich</h2>
-                            <h2>$5.99</h2>
+                            <h2>Pineapple Mango Spinach</h2>
+                            <h2>$6.02</h2>
                           </div>
-                          <p>test test test test</p>
-                          <hr />
-                        </div>
-                        <div className="menuItem">
-                          <div className="topPortion">
-                            <h2>Sandwhich</h2>
-                            <h2>$5.99</h2>
-                          </div>
-                          <p>test test test test</p>
+                          <p>Pineapple, Mango, Spinach, Apple Juice</p>
                           <hr />
                         </div>
                       </div>
                     </Col>
-                    <Col xs={24} lg={18}>
+                    <Col xs={24} lg={20}>
                       <a
                         href="https://us.orderspoon.com/turtleleafcafe"
                         target="_blank"
