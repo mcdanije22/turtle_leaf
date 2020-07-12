@@ -31,14 +31,14 @@ const IndexPage = () => {
       }
       tl_sign: file(relativePath: { eq: "tl_sign.jpg" }) {
         childImageSharp {
-          fluid(quality: 100, maxWidth: 380) {
+          fluid(quality: 100, maxWidth: 400) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       customers: file(relativePath: { eq: "customers.jpg" }) {
         childImageSharp {
-          fluid(quality: 100, maxWidth: 380) {
+          fluid(quality: 100, maxWidth: 400) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -52,7 +52,7 @@ const IndexPage = () => {
       }
       storeFront: file(relativePath: { eq: "store_front.jpg" }) {
         childImageSharp {
-          fluid(quality: 90, maxWidth: 1920) {
+          fluid(quality: 90, maxWidth: 400) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -73,14 +73,14 @@ const IndexPage = () => {
       }
       smoothie: file(relativePath: { eq: "smoothie.jpg" }) {
         childImageSharp {
-          fluid(quality: 90, maxWidth: 380) {
+          fluid(quality: 90, maxWidth: 400) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       wrap: file(relativePath: { eq: "wrap.jpg" }) {
         childImageSharp {
-          fluid(quality: 90, maxWidth: 380) {
+          fluid(quality: 90, maxWidth: 1920) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -133,7 +133,12 @@ const IndexPage = () => {
                   <Link to="/about">About</Link>
                 </li>
                 <li>
-                  <Link to="/">Menu</Link>
+                  <a
+                    href="https://us.orderspoon.com/turtleleafcafe"
+                    target="_blank"
+                  >
+                    Menu
+                  </a>
                 </li>
                 <li>
                   <Link to="/news">News</Link>
@@ -262,10 +267,10 @@ const IndexPage = () => {
                       <div id="menuLeftSide">
                         <div className="menuItem">
                           <div className="topPortion">
-                            <h2>Sandwhich</h2>
-                            <h2>$5.99</h2>
+                            <h2>Beef and Mushroom</h2>
+                            <h2>$9.49</h2>
                           </div>
-                          <p>test test test test</p>
+                          <p>Beef, Provolone, Spinach, and Mushrooms</p>
                           <hr />
                         </div>
                         <div className="menuItem">
@@ -347,9 +352,14 @@ const IndexPage = () => {
                       </div>
                     </Col>
                     <Col xs={24} lg={18}>
-                      <Button size="large" ghost>
-                        View Full Menu
-                      </Button>
+                      <a
+                        href="https://us.orderspoon.com/turtleleafcafe"
+                        target="_blank"
+                      >
+                        <Button size="large" ghost>
+                          View Full Menu
+                        </Button>
+                      </a>
                     </Col>
                   </Row>
                 </div>

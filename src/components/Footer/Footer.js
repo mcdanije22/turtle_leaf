@@ -24,36 +24,7 @@ const Footer = () => {
       </div>
       <hr />
       <ul id="footerNav">
-        <Row justify="center" gutter={[0, 12]}>
-          {/* <Col xs={24}>
-            <li>
-              <Button type="link" style={{ fontSize: "1.2rem" }}>
-                About
-              </Button>
-            </li>
-          </Col>
-          <Col xs={24}>
-            <li>
-              <Button type="link" style={{ fontSize: "1.2rem" }}>
-                Menu
-              </Button>
-            </li>
-          </Col>
-          <Col xs={24}>
-            <li>
-              <Button type="link" style={{ fontSize: "1.2rem" }}>
-                News
-              </Button>
-            </li>
-          </Col>
-          <Col xs={24}>
-            <li>
-              <Button type="link" style={{ fontSize: "1.2rem" }}>
-                Contact
-              </Button>
-            </li>
-          </Col> */}
-        </Row>
+        <Row justify="center" gutter={[0, 12]}></Row>
         <ul id="footerSocial">
           <li>
             <Link to="/">
@@ -73,8 +44,8 @@ const Footer = () => {
         </ul>
       </ul>
       <div id="shopInfo">
-        <p>123 Main St Mount Morris, Ny</p>
-        <p>555-435-7744</p>
+        <p>315 E Water St, Elmira, NY 14901</p>
+        <p>(607) 767-6191</p>
         <p className="copyRight">
           {" "}
           © {new Date().getFullYear()} Turtle Leaf Cafe

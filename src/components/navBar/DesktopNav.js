@@ -7,14 +7,23 @@ const DesktopNav = () => {
     <div id="desktopNavContainer">
       <ul id="desktopNav">
         <li>
+          <Link to="/" activeClassName="activeNav">
+            Home
+          </Link>
+        </li>
+        <li>
           <Link to="/about" activeClassName="activeNav">
             About
           </Link>
         </li>
         <li>
-          <Link to="/" activeClassName="activeNav">
+          <a
+            href="https://us.orderspoon.com/turtleleafcafe"
+            target="_blank"
+            activeClassName="activeNav"
+          >
             Menu
-          </Link>
+          </a>
         </li>
         <li>
           <Link to="/news" activeClassName="activeNav">
