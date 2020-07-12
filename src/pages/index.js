@@ -167,25 +167,34 @@ const IndexPage = () => {
               </Button>
               <ul id="bottomSocial">
                 <li>
-                  <Link to="/">
+                  <a
+                    href="https://www.facebook.com/TurtleLeafCafe/"
+                    target="_blank"
+                  >
                     <Button shape="circle" ghost size="large">
                       <FacebookOutlined />
                     </Button>
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link to="/">
+                  <a
+                    href="https://www.facebook.com/TurtleLeafCafe/"
+                    target="_blank"
+                  >
                     <Button shape="circle" ghost size="large">
                       <TwitterOutlined />
                     </Button>
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link to="/">
+                  <a
+                    href="https://www.facebook.com/TurtleLeafCafe/"
+                    target="_blank"
+                  >
                     <Button shape="circle" ghost size="large">
                       <InstagramOutlined />
                     </Button>
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>

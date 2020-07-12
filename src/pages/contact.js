@@ -56,8 +56,12 @@ const Contact = () => {
               <div id="contactInfo">
                 <h1>Come see us!</h1>
                 <p>315 E Water St, Elmira, NY 14901</p>
-                <p>555-435-7744</p>
-                <p>info@demolink.org</p>
+                <a href="tel:607-767-6191">(607) 767-6191</a>
+                <p>
+                  <a href="mailto: adam@turtleleafcafe.com">
+                    adam@turtleleafcafe.com
+                  </a>
+                </p>
                 <p>We are open: Mon-Fri 11:00am-2pm, Sa-Su 10:00am-3pm</p>
                 <div id="contactSocial">
                   <h3>
@@ -65,19 +69,28 @@ const Contact = () => {
                   </h3>
                   <ul id="contactSocialList">
                     <li>
-                      <Link to="">
+                      <a
+                        href="https://www.facebook.com/TurtleLeafCafe/"
+                        target="_blank"
+                      >
                         <FacebookOutlined />
-                      </Link>
+                      </a>
                     </li>
                     <li>
-                      <Link to="">
+                      <a
+                        href="https://www.facebook.com/TurtleLeafCafe/"
+                        target="_blank"
+                      >
                         <TwitterOutlined />
-                      </Link>
+                      </a>
                     </li>
                     <li>
-                      <Link to="">
+                      <a
+                        href="https://www.facebook.com/TurtleLeafCafe/"
+                        target="_blank"
+                      >
                         <InstagramOutlined />
-                      </Link>
+                      </a>
                     </li>
                   </ul>
                 </div>

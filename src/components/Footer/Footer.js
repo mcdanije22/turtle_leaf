@@ -27,27 +27,30 @@ const Footer = () => {
         <Row justify="center" gutter={[0, 12]}></Row>
         <ul id="footerSocial">
           <li>
-            <Link to="/">
+            <a href="https://www.facebook.com/TurtleLeafCafe/" target="_blank">
               <FacebookOutlined />
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to="/">
+            <a href="https://www.facebook.com/TurtleLeafCafe/" target="_blank">
+              {" "}
               <TwitterOutlined />
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to="/">
+            <a href="https://www.facebook.com/TurtleLeafCafe/" target="_blank">
+              {" "}
               <InstagramOutlined />
-            </Link>
+            </a>
           </li>
         </ul>
       </ul>
       <div id="shopInfo">
         <p>315 E Water St, Elmira, NY 14901</p>
-        <p>(607) 767-6191</p>
+        <p>
+          <a href="tel:607-767-6191">(607) 767-6191</a>
+        </p>
         <p className="copyRight">
-          {" "}
           © {new Date().getFullYear()} Turtle Leaf Cafe
         </p>
       </div>
