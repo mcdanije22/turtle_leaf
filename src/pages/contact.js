@@ -36,6 +36,7 @@ const Contact = () => {
   const onFinishFailed = errorInfo => {
     console.log("Failed:", errorInfo)
   }
+
   return (
     <Layout>
       <div id="contactContainer">
@@ -102,7 +103,7 @@ const Contact = () => {
 
                 {/* form  needed for netlify  */}
                 <form
-                  name="ContactForm"
+                  name="contactForm"
                   data-netlify="true"
                   data-netlify-honeypot="bot-field"
                   hidden

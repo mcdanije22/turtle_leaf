@@ -3,7 +3,7 @@ slug: "/news/market_season"
 date: 06-26-2020
 title: "Market Season"
 subtitle: "WE WEREN'T SURE"
-featuredImage: test.jpg
+featuredImage: store.jpg
 ---
 
 WE WEREN'T SURE THAT WE WOULD BE DOING ANY MARKETS THIS SUMMER....

@@ -3,7 +3,7 @@ slug: "/news/jubilee_update"
 date: 06-22-2020
 title: "Jubilee Update"
 subtitle: "WE WEREN'T SURE"
-featuredImage: test.jpg
+featuredImage: food.jpg
 ---
 
 We want to take a moment to thank everyone that supported our POP UP at Horseheads Jubilee over the last 10 weeks. We owe a big thank you to Dave Marks and his entire staff who made some sacrifices to allow us the opportunity to run a secondary location in the midst of our COVID-19 shutdown.
