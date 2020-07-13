@@ -1,6 +1,6 @@
 ---
 slug: "/news/jubilee_update"
-date: "Jun 22, 2020"
+date: 06-22-2020
 title: "Jubilee Update"
 subtitle: "WE WEREN'T SURE"
 featuredImage: test.jpg

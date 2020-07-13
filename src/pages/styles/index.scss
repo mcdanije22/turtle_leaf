@@ -130,7 +130,11 @@ p {
         }
       }
       h2 {
-        margin-top: 1rem;
+        margin: 0.5rem 0 2rem 0;
+        @include desktop {
+          margin: 2rem 0;
+          font-size: 1.5rem;
+        }
       }
     }
     h1 {
@@ -221,6 +225,9 @@ p {
         min-height: 500px;
         width: 100%;
         max-width: 400px;
+        .gatsby-image-wrapper {
+          height: 300px;
+        }
       }
       @include desktop {
         padding: 0 1rem;

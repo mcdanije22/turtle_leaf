@@ -85,7 +85,7 @@ const IndexPage = () => {
           }
         }
       }
-      allMarkdownRemark {
+      allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
         edges {
           node {
             id
@@ -162,9 +162,14 @@ const IndexPage = () => {
           </Col>
           <Col>
             <div id="bottomLanding">
-              <Button ghost shape="round" size="large">
-                Order Online
-              </Button>
+              <a
+                href="https://us.orderspoon.com/turtleleafcafe"
+                target="_blank"
+              >
+                <Button ghost shape="round" size="large">
+                  Order Online
+                </Button>
+              </a>
               <ul id="bottomSocial">
                 <li>
                   <a

@@ -1,9 +1,9 @@
 ---
 slug: "/news/july_4th"
-date: "Jul 01, 2020"
+date: 07-01-2020
 title: "Happy 4th of July"
 subtitle: "WE WEREN'T SURE"
-featuredImage: test.jpg
+featuredImage: specials.png
 ---
 
 Get ready to have a blast! If your neighbors aren't setting off enough fireworks each night at 10pm, and your Fourth plans look different than in years past. We have the answer....the Firecracker Chicken Panini. We'll be serving this all month along with the new Tropical Summer Smoothie.

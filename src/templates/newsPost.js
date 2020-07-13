@@ -27,10 +27,9 @@ export default function Template({ data }) {
           <h1>What's New</h1>
         </div>
         <Row justify="center">
-          <Col xs={24} lg={12}>
+          <Col xs={24} lg={8}>
             <div className="postTitleInfo">
               <h1>{frontmatter.title}</h1>
-              {/* <p>{frontmatter.subtitle}</p> */}
               <p>{frontmatter.date}</p>
             </div>
             <div className="postImage">
@@ -67,7 +66,6 @@ export const pageQuery = graphql`
         date
         slug
         title
-        subtitle
         featuredImage {
           childImageSharp {
             fluid(maxWidth: 1980) {
