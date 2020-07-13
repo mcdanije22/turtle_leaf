@@ -107,12 +107,12 @@ const Contact = () => {
                   data-netlify="true"
                 >
                   <Form.Item
-                    name="Name"
+                    name="name"
                     rules={[
                       { required: true, message: "Please input your name!" },
                     ]}
                   >
-                    <Input placeholder="Name" />
+                    <Input name="name" placeholder="Name" />
                   </Form.Item>
                   <Form.Item
                     name="email"
@@ -120,7 +120,7 @@ const Contact = () => {
                       { required: true, message: "Please input your name!" },
                     ]}
                   >
-                    <Input placeholder="Email" />
+                    <Input name="email" placeholder="Email" />
                   </Form.Item>
                   <Form.Item
                     name="message"
@@ -128,7 +128,7 @@ const Contact = () => {
                       { required: true, message: "Please input your message!" },
                     ]}
                   >
-                    <Input.TextArea placeholder="Message" />
+                    <Input.TextArea name="message" placeholder="Message" />
                   </Form.Item>
                   <Form.Item>
                     <Button type="primary" size="large" htmlType="submit">
