@@ -62,7 +62,10 @@ p {
         color: white;
       }
       h1 {
-        font-size: 3rem;
+        font-size: 2rem;
+        @include desktop {
+          font-size: 3rem;
+        }
       }
     }
     #bottomLanding {
@@ -82,8 +85,7 @@ p {
   }
   #IntroSection {
     margin: 8rem 1rem;
-    @include desktop {
-    }
+
     #introText {
       // margin-top: 1rem;
       max-width: 500px;
