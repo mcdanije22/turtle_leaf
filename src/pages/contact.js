@@ -99,6 +99,19 @@ const Contact = () => {
             <Col xs={24} lg={8}>
               <div id="messageFormSection">
                 <h1>Send us a message!</h1>
+
+                {/* form  needed for netlify  */}
+                <form
+                  name="ContactForm"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                  hidden
+                >
+                  <input type="text" name="name" />
+                  <input type="email" name="email" />
+                  <textarea name="message"></textarea>
+                </form>
+
                 <Form
                   name="ContactForm"
                   method="post"
@@ -108,6 +121,16 @@ const Contact = () => {
                   data-netlify="true"
                   netlify-honeypot="bot-field"
                 >
+                  {/* honeypot option needed for netlify  */}
+                  <Form.Item
+                    label="Don't fill this out"
+                    className={`hidden`}
+                    style={{ display: `none` }}
+                    name="bot-field"
+                  >
+                    <Input type={`hidden`} />
+                  </Form.Item>
+
                   <Form.Item
                     name="name"
                     rules={[
