@@ -101,10 +101,12 @@ const Contact = () => {
                 <h1>Send us a message!</h1>
                 <Form
                   name="ContactForm"
+                  method="post"
                   initialValues={{ remember: true }}
                   onFinish={onFinish}
                   onFinishFailed={onFinishFailed}
                   data-netlify="true"
+                  netlify-honeypot="bot-field"
                 >
                   <Form.Item
                     name="name"
@@ -131,7 +133,7 @@ const Contact = () => {
                     <Input.TextArea name="message" placeholder="Message" />
                   </Form.Item>
                   <Form.Item>
-                    <Button type="primary" size="large" htmlType="submit">
+                    <Button type="primary" size="large" type="submit">
                       Submit
                     </Button>
                   </Form.Item>
