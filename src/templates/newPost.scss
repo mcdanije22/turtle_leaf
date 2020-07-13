@@ -27,3 +27,15 @@ $desktop: 1024px;
     padding: 2rem 0;
   }
 }
+#previousButton {
+  padding: 0 1rem;
+  color: #1890ff;
+  .ant-btn,
+  .ant-btn-link {
+    padding: 0;
+    padding-left: 0.5rem;
+  }
+  @include desktop {
+    padding: 0;
+  }
+}

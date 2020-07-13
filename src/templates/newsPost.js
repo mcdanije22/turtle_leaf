@@ -4,7 +4,9 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "./newPost.scss"
-import { Col, Row } from "antd"
+import { Col, Row, Button } from "antd"
+import { Link } from "gatsby"
+import { ArrowLeftOutlined } from "@ant-design/icons"
 
 export default function Template({ data }) {
   const { markdownRemark } = data
@@ -44,6 +46,12 @@ export default function Template({ data }) {
               className="newsPostContent"
               dangerouslySetInnerHTML={{ __html: html }}
             />
+            <div id="previousButton">
+              <ArrowLeftOutlined />
+              <Link to="/news">
+                <Button type="link">Back to all stories</Button>
+              </Link>
+            </div>
           </Col>
         </Row>
       </div>

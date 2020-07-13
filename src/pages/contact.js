@@ -104,6 +104,7 @@ const Contact = () => {
                   initialValues={{ remember: true }}
                   onFinish={onFinish}
                   onFinishFailed={onFinishFailed}
+                  data-netlify="true"
                 >
                   <Form.Item
                     name="Name"
@@ -130,7 +131,7 @@ const Contact = () => {
                     <Input.TextArea placeholder="Message" />
                   </Form.Item>
                   <Form.Item>
-                    <Button type="primary" htmlType="submit">
+                    <Button type="primary" size="large" htmlType="submit">
                       Submit
                     </Button>
                   </Form.Item>
